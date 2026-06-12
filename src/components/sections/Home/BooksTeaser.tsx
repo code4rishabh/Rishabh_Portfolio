@@ -21,10 +21,10 @@ export default function BooksTeaser() {
       link: "https://amzn.in/d/04YPt5mw"
     },
     {
-      title: "Neural Narratives",
-      description: "A collection of short stories co-written with the first iteration of Faxlab's generative AI.",
-      image: IMAGES.books.neuralNarratives,
-      link: "/books"
+      title: "Transforming Supply Chain with AI",
+      description: "A practical guide to leveraging AI, machine learning, and automation to optimize modern supply chain networks.",
+      image: IMAGES.books.supplyChain,
+      link: "https://amzn.in/d/06E5erf2"
     }
   ];
 

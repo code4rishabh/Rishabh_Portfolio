@@ -37,8 +37,8 @@ export const IMAGES = {
       "/images/books/Superhero1.png",
     marriageDates:
       "/images/books/My_50_arrange_marrige_dates.png",
-    neuralNarratives:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBGKelMui4pxZx419H8Huw1ERTNJg7foBspbZ3QPL5kX5jN2I5gJsVM4T1Mw_66dlt5NEespYan6Dk1J75YyGiH9Yy-cEUD5ZLjqzUKGxmBJKsQgAEW5qgo-0NTzwBsudPQ5pzfbJXGzzQVCpYaCVwJ9UP78uQJ4eZq3LcQYEiR6cHplRte4QrNAmzCKUJR6dutFV20yUK3v6tigT_eDpaB4yk0vNfbs5GWvwCxwAvHVtQECukjkxxRNOELcihUpP0r5Hy4ZAS1pvM7",
+    supplyChain:
+      "/images/books/Supply_Chain_With_AI.png",
   },
 
   // ── Insights / Blog ───────────────────────────────────────

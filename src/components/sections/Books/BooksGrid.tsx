@@ -37,14 +37,14 @@ const BOOKS = [
     coverAlt: "My 50 Arranged Marriage Dates - Book Cover",
   },
   {
-    title: "Neural Narratives",
+    title: "Transforming Supply Chain with AI",
     description:
-      "A collection of short stories co-written with the first iteration of Faxlab's generative AI — where technology meets storytelling.",
-    year: "2021",
-    genre: "Tech Philosophy / Fiction",
-    amazonHref: "#", // ← Update with real Amazon link
-    coverSrc: IMAGES.books.neuralNarratives,
-    coverAlt: "Neural Narratives - Book Cover",
+      "A practical guide to leveraging AI, machine learning, and automation to optimize modern supply chain networks.",
+    year: "2024",
+    genre: "Technology / Business",
+    amazonHref: "https://amzn.in/d/06E5erf2",
+    coverSrc: IMAGES.books.supplyChain,
+    coverAlt: "Transforming Supply Chain with AI - Book Cover",
   },
 ];
 // ─────────────────────────────────────────────────────────────
