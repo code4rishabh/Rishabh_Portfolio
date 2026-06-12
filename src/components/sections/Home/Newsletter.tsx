@@ -5,7 +5,7 @@ import { Send } from 'lucide-react';
 
 export default function Newsletter() {
   return (
-    <section className="py-20 md:py-32 bg-surface-container-high overflow-hidden">
+    <section className="py-12 md:py-20 bg-surface-container-high overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

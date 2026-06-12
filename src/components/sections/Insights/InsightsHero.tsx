@@ -41,7 +41,7 @@ export const InsightsHero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="flex flex-wrap gap-3 md:gap-4 mt-12"
+        className="flex flex-nowrap overflow-x-auto pb-4 md:pb-0 md:flex-wrap gap-3 md:gap-4 mt-12 no-scrollbar"
       >
         {CATEGORIES.map((cat, index) => (
           <motion.button
@@ -50,7 +50,7 @@ export const InsightsHero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 + index * 0.1 }}
             onClick={() => setActive(cat)}
-            className={`px-6 py-2.5 rounded-full font-bold text-sm transition-all border ${
+            className={`px-6 py-2.5 rounded-full font-bold text-sm transition-all border whitespace-nowrap ${
               active === cat
                 ? "bg-primary text-on-primary border-primary shadow-lg shadow-primary/20"
                 : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:bg-surface-container-high hover:border-outline-variant"

@@ -53,7 +53,7 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
               <span className="text-2xl font-bold font-display tracking-tight text-on-surface">
-                Rishabh Agarwal
+                Rishabh Agrawal
               </span>
             </Link>
             <p className="text-on-surface-variant text-base max-w-sm leading-relaxed">
@@ -116,7 +116,7 @@ export const Footer = () => {
 
         {/* Ghost Border applied here as a subtle fallback (outline-variant at 20%) */}
         <div className="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-on-surface-variant">
-          <p>© {new Date().getFullYear()} Rishabh Agarwal. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Rishabh Agrawal. All rights reserved.</p>
           <div className="flex gap-6">
             <span>The Intellectual Architect</span>
             <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>

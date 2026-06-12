@@ -56,4 +56,12 @@ export const IMAGES = {
     hero:
       "/images/achievements/ISRO.png",
   },
+  
+  // ── YouTube Channel / Triveni Sangam Dialogues ────────────
+  youtube: {
+    logo: "/images/triveni_sangam_logo.png",
+    mantraThumbnail: "/images/mantra_thumbnail.png",
+    jyotirlingaThumbnail: "/images/jyotirlinga_thumbnail.png",
+    mahabharatThumbnail: "/images/mahabharat_thumbnail.png",
+  },
 } as const;

@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 
 const STAT = {
   number: "10+",
-  label: "Global Innovation Awards Received",
+  label: "Honors Across Aerospace, Tech & Literature",
 };
 
 export const AchievementsHero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center px-6 md:px-8 overflow-hidden bg-surface pt-32 pb-20">
+    <section className="relative min-h-[80vh] flex items-center px-6 md:px-8 overflow-hidden bg-surface pt-32 pb-32 md:pb-20">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
 
         {/* Left: Text content */}
@@ -56,7 +56,7 @@ export const AchievementsHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute -bottom-6 -left-4 md:-left-8 bg-surface p-6 rounded-2xl shadow-2xl max-w-[240px] md:max-w-xs lg:-rotate-3 border border-outline-variant/10"
+            className="absolute -bottom-4 left-4 md:-bottom-6 md:-left-8 bg-surface p-5 md:p-6 rounded-2xl shadow-xl max-w-[200px] md:max-w-xs lg:-rotate-3 border border-outline-variant/10"
           >
             <p className="text-primary font-display font-bold text-3xl md:text-4xl mb-1">{STAT.number}</p>
             <p className="text-on-surface-variant text-sm md:text-base font-medium leading-tight">{STAT.label}</p>

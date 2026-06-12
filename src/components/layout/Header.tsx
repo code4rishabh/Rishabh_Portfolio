@@ -45,17 +45,17 @@ export const Header = () => {
         {/* Logo - Textual, Space Grotesk */}
         <Link href="/" className="flex items-center gap-2 group min-w-0">
           <span className="text-xl md:text-2xl font-bold font-display tracking-tight text-on-surface truncate">
-            Rishabh Agarwal
+            Rishabh Agrawal
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8 font-display font-bold text-lg">
+        <div className="hidden md:flex items-center gap-2 lg:gap-8 font-display font-bold text-lg">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-on-surface-variant hover:text-primary transition-all duration-300 relative group"
+              className="text-sm lg:text-lg text-on-surface-variant hover:text-primary transition-all duration-300 relative group px-2"
             >
               {link.name}
               <span
@@ -105,7 +105,7 @@ export const Header = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 glass-nav border-t border-primary/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl h-screen bg-surface"
+            className="absolute top-full left-0 right-0 border-t border-outline-variant/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl h-screen bg-surface backdrop-blur-xl"
           >
             {navLinks.map((link, idx) => (
               <motion.div

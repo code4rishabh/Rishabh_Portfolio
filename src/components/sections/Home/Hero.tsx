@@ -4,7 +4,21 @@ import React from 'react';
 import { IMAGES } from '@/lib/imageConfig';
 import { motion } from 'framer-motion';
 
+const YoutubeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+  </svg>
+);
+
 export default function Hero() {
+  const handleScrollToYoutube = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('youtube-channel');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden bg-surface">
       <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -34,7 +48,7 @@ export default function Hero() {
             Bridging the gap between technical precision and human narrative. Currently building Faxlab AI while exploring the philosophy of innovation through the written word.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
             <motion.a
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -51,6 +65,16 @@ export default function Hero() {
             >
               Faxlab AI
             </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              href="#youtube-channel"
+              onClick={handleScrollToYoutube}
+              className="w-full sm:w-auto bg-[#FF0000]/10 hover:bg-[#FF0000] text-[#FF0000] hover:text-white px-8 py-4 rounded-md text-lg font-bold shadow-sm hover:shadow-lg transition-all duration-300 border border-[#FF0000]/20 hover:border-transparent text-center flex items-center justify-center gap-2"
+            >
+              <YoutubeIcon className="w-5 h-5 fill-current" />
+              <span>Triveni Sangam Dialogues</span>
+            </motion.a>
           </div>
         </motion.div>
 
@@ -63,7 +87,7 @@ export default function Hero() {
         >
           <div className="aspect-[4/5] max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-2xl relative z-10 transform lg:rotate-2 hover:rotate-0 transition-transform duration-700">
             <img
-              alt="Rishabh Agarwal"
+              alt="Rishabh Agrawal"
               className="w-full h-full object-cover"
               src={IMAGES.profile.heroPortrait}
             />

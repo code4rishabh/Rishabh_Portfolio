@@ -1,104 +1,126 @@
 "use client";
 
-// ============================================================
-// AchievementsTimeline.tsx
-// Section: Professional timeline with alternating layout.
-// Design: Stitch "Achievements & Milestones" screen.
-// To customize: Edit the TIMELINE_ITEMS array below.
-//   Each item: { year, tag, tagColor, title, description }
-//   tagColor: "primary" | "secondary"
-// ============================================================
-
 import React from "react";
+import { motion } from "framer-motion";
 
-// ─── Editable timeline items ──────────────────────────────────
 const TIMELINE_ITEMS = [
   {
+    year: "2016",
+    tag: "STRATEGY & REFORM",
+    tagColor: "primary" as const,
+    title: "All India Voting (AIV) Framework",
+    description:
+      "Proposed a revolutionary tech-driven national voting system. Concurrently formulated the 'SamudraManthan' strategy, using cultural metaphors to solve complex institutional challenges.",
+  },
+  {
     year: "2018",
-    tag: "FOUNDER ERA",
+    tag: "TECH FOUNDATION",
     tagColor: "primary" as const,
     title: "Inception of Faxlab AI",
     description:
-      "Founded Faxlab with a vision to automate the editorial process without losing the human essence of storytelling. Scaled the platform to serve 500+ premium publishers worldwide within the first 18 months.",
+      "Founded Faxlab to bridge technical data precision with narrative storytelling. Developed proprietary AI that empowered publishers to scale editorial workflows globally.",
   },
   {
     year: "2020",
-    tag: "LITERARY DEBUT",
+    tag: "LITERARY IMPACT",
     tagColor: "secondary" as const,
-    title: '"What If You Are a Superhero" Published',
+    title: '"What If You Are a Superhero" & Resilience',
     description:
-      "Released debut work exploring the philosophy of human potential and untapped abilities. The book resonated deeply with readers across technology and self-help communities.",
+      "Published debut philosophical work. During the global shift, authored 'The Resilience Strategy' to help organizations navigate uncertainty with a stoic and adaptive mindset.",
   },
   {
     year: "2022",
     tag: "INNOVATION PEAK",
     tagColor: "primary" as const,
-    title: "Faxlab AI v2.0 Launch",
+    title: "Nodal Transition to Aerospace",
     description:
-      "Revolutionized the platform with proprietary AI tuned for editorial precision. This milestone marked the shift from a tool provider to a core infrastructure partner for global media houses.",
+      "While scaling Faxlab v2.0, pivotally applied AI logic to satellite data and remote sensing, laying the groundwork for high-impact aerospace collaborations.",
+  },
+  {
+    year: "2025",
+    tag: "SPACE FRONTIER",
+    tagColor: "primary" as const,
+    title: "ISRO Recognition & Xovian Milestone",
+    description:
+      "Received an Appreciation Certificate from ISRO leadership for contributions to Space Technology. A crowning achievement in the journey of technical and visionary excellence.",
   },
 ];
-// ─────────────────────────────────────────────────────────────
 
 export const AchievementsTimeline = () => {
   return (
-    <section className="py-32 px-8">
+    <section className="py-20 md:py-32 px-6 md:px-8 bg-surface">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <h2 className="text-4xl font-display font-bold tracking-tight text-on-surface mb-20 text-center">
-          Professional Timeline
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20 md:mb-32"
+        >
+          <span className="text-primary font-display font-bold uppercase tracking-widest text-sm mb-4 block">Chronicle</span>
+          <h2 className="font-display font-bold text-on-surface">
+            Professional Timeline
+          </h2>
+          <div className="w-24 h-1.5 bg-primary/20 mx-auto rounded-full mt-6"></div>
+        </motion.div>
 
-        <div className="space-y-16">
+        <div className="space-y-24 md:space-y-32">
           {TIMELINE_ITEMS.map((item, idx) => {
-            const isOdd = idx % 2 !== 0; // alternates layout direction
+            const isOdd = idx % 2 !== 0;
             return (
-              <div
+              <motion.div
                 key={item.year}
-                className="grid md:grid-cols-[1.2fr_0.8fr] gap-12 items-start"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-20 items-center"
               >
-                {/* Content column — order flips on odd rows */}
-                <div className={isOdd ? "order-2" : "order-2 md:order-1"}>
-                  {/* Tag */}
+                {/* Content column */}
+                <div className={isOdd ? "lg:order-2" : "lg:order-1"}>
                   <div
-                    className={`inline-block px-4 py-1 rounded text-sm font-bold mb-4 bg-surface-container-high ${item.tagColor === "primary"
-                      ? "text-primary"
-                      : "text-secondary"
+                    className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-6 border ${
+                      item.tagColor === "primary"
+                        ? "bg-primary/5 text-primary border-primary/20"
+                        : "bg-primary/5 text-primary border-primary/20"
                       }`}
                   >
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                     {item.tag}
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-3xl font-display font-bold text-on-surface mb-4">
+                  <h3 className="text-3xl md:text-4xl font-display font-bold text-on-surface mb-6 leading-tight">
                     {item.title}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-on-surface-variant leading-relaxed text-lg">
+                  <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed opacity-90">
                     {item.description}
                   </p>
                 </div>
 
-                {/* Year + accent bar column */}
+                {/* Year display */}
                 <div
-                  className={`flex items-center gap-6 ${isOdd ? "order-1" : "order-1 md:order-2 md:justify-end"
-                    }`}
+                  className={`flex items-center gap-6 lg:gap-10 ${
+                    isOdd ? "lg:order-1" : "lg:order-2 lg:justify-end"
+                  }`}
                 >
-                  {/* Year — large muted number for visual rhythm */}
-                  <span className="text-6xl font-bold text-on-surface-variant/10 font-display">
-                    {item.year}
-                  </span>
+                  <div className="flex flex-col items-center lg:items-end">
+                    <div className="bg-surface-container-high border border-outline-variant/10 px-6 py-2 rounded-xl shadow-sm mb-2">
+                       <span className="text-3xl md:text-5xl font-bold text-primary font-display">
+                        {item.year}
+                      </span>
+                    </div>
+                    <div className="h-1 w-12 bg-primary/20 rounded-full"></div>
+                  </div>
 
-                  {/* Vertical accent bar */}
                   <div
-                    className={`w-2 h-24 rounded-full hidden md:block ${item.tagColor === "primary"
-                      ? "bg-primary"
-                      : "bg-primary-container"
-                      }`}
+                    className={`w-1.5 h-24 md:h-40 rounded-full hidden lg:block ${
+                      item.tagColor === "primary" ? "bg-primary" : "bg-primary/40"
+                    }`}
                   ></div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

@@ -31,34 +31,34 @@
   --color-error: var(--color-error-v);
 
   /* Helper utilities */
-  --shadow-ambient: 0 20px 40px rgba(17, 28, 44, 0.06);
+  --shadow-ambient: 0 12px 30px rgba(2, 132, 199, 0.04);
 }
 
 :root {
-  /* Design system tokens exactly as specified */
-  --color-background-v: #f9f9ff;
-  --color-surface-v: #f9f9ff;
-  --color-surface-container-lowest-v: #ffffff;
-  --color-surface-container-low-v: #f0f3ff;
-  --color-surface-container-v: #e7eeff;
-  --color-surface-container-high-v: #dee8ff;
-  --color-surface-variant-v: #d8e3fa;
-  --color-surface-bright-v: #f9f9ff;
+  /* Premium Sky Blue & Pure White Shade Light Theme System (No Black) */
+  --color-background-v: #f0f7ff;                   /* Very soft, bright sky-blue background */
+  --color-surface-v: #ffffff;                      /* Pure white surface */
+  --color-surface-container-lowest-v: #ffffff;      /* Pure white container base */
+  --color-surface-container-low-v: #f4f9fe;         /* Extremely soft white-blue tint */
+  --color-surface-container-v: #e0f2fe;             /* Soft pastel sky-blue container */
+  --color-surface-container-high-v: #bae6fd;        /* Vivid sky-blue border contrast */
+  --color-surface-variant-v: #7dd3fc;               /* Deep sky-blue highlight states */
+  --color-surface-bright-v: #ffffff;                /* Pure white accent */
 
-  --color-primary-v: #00677e;
-  --color-primary-container-v: #1bb8de;
-  --color-on-primary-v: #ffffff;
+  --color-primary-v: #0284c7;                       /* Vibrant high-end Sky Blue */
+  --color-primary-container-v: #e0f2fe;             /* Soft pastel sky-blue contrast base */
+  --color-on-primary-v: #ffffff;                    /* Pure white text on primary CTA */
 
-  --color-secondary-v: #466274;
-  --color-secondary-container-v: #c9e6fc;
-  --color-on-secondary-container-v: #4c687a;
+  --color-secondary-v: #0369a1;                     /* Radiant deep sky-blue (representing philosophy/wisdom) */
+  --color-secondary-container-v: #f0f9ff;           /* Warm soft light sky blue container contrast */
+  --color-on-secondary-container-v: #0369a1;        /* Deep sky-blue text contrast */
 
-  --color-on-surface-v: #111c2c;
-  --color-on-surface-variant-v: #3d494d;
+  --color-on-surface-v: #0f2d4a;                    /* Luxurious deep sapphire navy text (No Black) */
+  --color-on-surface-variant-v: #3b5e7d;            /* Clean high-contrast slate-navy description text */
 
-  --color-outline-variant-v: #bcc8ce;
-  --color-outline-v: #6d797e;
-  --color-error-v: #ba1a1a;
+  --color-outline-variant-v: #e0f2fe;               /* Extremely clean and thin sky-blue borders */
+  --color-outline-v: #38bdf8;                       /* Focused border line */
+  --color-error-v: #ef4444;                         /* Sharp vivid red error */
 }
 
 body {
@@ -69,10 +69,10 @@ body {
 }
 
 .glass-nav {
-  background: rgba(249, 249, 255, 0.85); /* background-v at 85% for better contrast */
+  background: rgba(255, 255, 255, 0.85); /* Pure white at 85% opacity */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 103, 126, 0.1);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.08); /* Sky blue border at 8% */
 }
 
 .ambient-shadow {
@@ -80,7 +80,7 @@ body {
 }
 
 .ghost-border {
-  border: 1px solid rgba(188, 200, 206, 0.2); /* outline-variant at 20% */
+  border: 1px solid rgba(224, 242, 254, 0.8); /* outline-variant at 80% */
 }
 
 /* Base Headings - Responsive Scale */

@@ -29,7 +29,7 @@ export default function BooksTeaser() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-surface">
+    <section className="py-12 md:py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
           <motion.div

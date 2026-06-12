@@ -62,26 +62,88 @@ export const AboutMilestones = () => {
             </div>
           </div>
 
-          {/* Small card: Education */}
-          <div className="md:col-span-1 bg-surface-container-highest p-8 rounded-xl shadow-sm border border-outline-variant/10">
-            <GraduationCap className="w-8 h-8 text-primary mb-4" />
-            <h4 className="font-display font-bold text-lg">Education</h4>
-            {/* Update with real education details */}
-            <p className="text-sm text-on-surface-variant">
-              Technical background with a passion for bridging engineering and
-              creative disciplines.
-            </p>
-          </div>
-
-          {/* Small card: Recognition */}
-          <div className="md:col-span-1 bg-secondary-container p-8 rounded-xl shadow-sm">
+          {/* Recognition Card (Expanded to col-span-2) */}
+          <div className="md:col-span-2 bg-secondary-container p-8 rounded-xl shadow-sm flex flex-col justify-center">
             <Award className="w-8 h-8 text-on-secondary-container mb-4" />
-            <h4 className="font-display font-bold text-lg text-on-secondary-container">Recognitions</h4>
+            <h4 className="font-display font-bold text-2xl text-on-secondary-container mb-2">Recognitions</h4>
             {/* Update with real awards */}
-            <p className="text-sm text-on-secondary-container">
+            <p className="text-lg text-on-secondary-container">
               Author, entrepreneur, and tech founder recognized for innovation
               at the intersection of AI and storytelling.
             </p>
+          </div>
+        </div>
+
+        {/* Dedicated Education Section */}
+        <div className="mt-20">
+          <div className="mb-10 flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+              <GraduationCap className="w-7 h-7" />
+            </div>
+            <h2 className="text-3xl font-display font-bold">Academic Background</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* IIM Calcutta */}
+            <div className="group relative p-8 bg-surface hover:bg-surface-container-lowest border border-outline-variant/10 hover:border-primary/30 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="relative z-10 flex-1 flex flex-col">
+                <p className="font-bold text-xl font-display text-on-surface mb-1 group-hover:text-primary transition-colors duration-300">Indian Institute of Management, Calcutta</p>
+                <p className="text-sm text-on-surface-variant leading-relaxed mb-4 flex-1">MBA, Business Strategy, Supply Chain Management, Public Policy</p>
+                
+                <div className="space-y-3 mt-auto pt-4 border-t border-outline-variant/10">
+                  <p className="text-xs font-medium text-on-surface-variant flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
+                    CAT 99.00% Percentile Holder
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">Apr 2013</span>
+                    <span className="text-xs font-bold text-on-surface-variant px-3 py-1 bg-surface-container rounded-full">Grade: A</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* IIT Kanpur */}
+            <div className="group relative p-8 bg-surface hover:bg-surface-container-lowest border border-outline-variant/10 hover:border-primary/30 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="relative z-10 flex-1 flex flex-col">
+                <p className="font-bold text-xl font-display text-on-surface mb-1 group-hover:text-primary transition-colors duration-300">Indian Institute of Technology, Kanpur</p>
+                <p className="text-sm text-on-surface-variant leading-relaxed mb-4 flex-1">MEng, Logistics, Materials, and Supply Chain Management</p>
+                
+                <div className="space-y-3 mt-auto pt-4 border-t border-outline-variant/10">
+                  <p className="text-xs font-medium text-on-surface-variant flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
+                    VLFM: Visionary Leadership Program
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">Dec 2012</span>
+                    <span className="text-xs font-bold text-on-surface-variant px-3 py-1 bg-surface-container rounded-full">Grade: A</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* IIT Madras */}
+            <div className="group relative p-8 bg-surface hover:bg-surface-container-lowest border border-outline-variant/10 hover:border-primary/30 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="relative z-10 flex-1 flex flex-col">
+                <p className="font-bold text-xl font-display text-on-surface mb-1 group-hover:text-primary transition-colors duration-300">Indian Institute of Technology, Madras</p>
+                <p className="text-sm text-on-surface-variant leading-relaxed mb-4 flex-1">MEng, Business Administration, Management and Operations</p>
+                
+                <div className="space-y-3 mt-auto pt-4 border-t border-outline-variant/10">
+                  <p className="text-xs font-medium text-transparent flex items-center gap-2 select-none">
+                    <span className="w-1.5 h-1.5 rounded-full bg-transparent" />
+                    Spacer
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">Oct 2012</span>
+                    <span className="text-xs font-bold text-on-surface-variant px-3 py-1 bg-surface-container rounded-full">Grade: A</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
