@@ -9,13 +9,13 @@
 // ============================================================
 
 import React from "react";
+import { IMAGES } from "@/lib/imageConfig";
 
 // ─── Editable article data ────────────────────────────────────
 // Add/remove articles or update their data here.
 const ARTICLES = [
-  {
-    imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAGMs5yAPywoBOMMN1yocU7UCSQbJlYb7C-HnmGB5UNfh6W1Xx8ubYj2fSG6xIVxY6gt-XRxVLdkQievuph3cL0PcH29pZ4FAmVokwWa6C2Q3_SdONLm4aofTwk2XTutzZT2LS3hzkRYRXn9rVCE0YKERDx-08JARf7YTKvObp7CgtL3BrsrSY9ob-U9ZF6255sm0QUOgyriwn-0AQrvBLqq2lNMVCvYUN30Sb6NfZS5F6VT5VaaiCAhIGcQTyTNXhtjmxQd3RGGQNU",
+   {
+    imageSrc: IMAGES.insights.aiTech,
     imageAlt: "AI & Technology article image",
     category: "AI & Technology",
     title: "The Ethics of Prompting: Who Owns the Output?",
@@ -26,8 +26,7 @@ const ARTICLES = [
     href: "#",
   },
   {
-    imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBGfdl0K-vYsacvKOJnIKKa3HCzUeY6BQIvqPjDcTThHdi1-GVlKa2oYCbde8ddyzxEkgEhteviLt572TOyrzaF0C3yPcpzGPjWUpB-6Hm0PL-nNvZ-qgTqdyAD79ur-LCq1UM757rTraP_J0TMEcO5eA02JZLTGs9PZv5slEUtzvZobaWZjslrPvaqwqZdB3l4kDp6aXp0PSi0lu9TmyvzLtvMjECKSgfGro9KlLbWxdon4EMDvT28iNKPYYR9Wdvubm4_DpzF2nar",
+    imageSrc: IMAGES.insights.narrative,
     imageAlt: "Narrative Strategy article image",
     category: "Narrative Strategy",
     title: "Building 'The Author' Brand in Tech",
@@ -38,8 +37,7 @@ const ARTICLES = [
     href: "#",
   },
   {
-    imageSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBopImNKm7kes778nkjUOwgiXPQp81elEpHdkhzz1VtxBN7FFlsOjbJ4RukNqQyRRg-AV-MM9eQdoaDUT1s0-zVAP7gbzj-hdHcvZ6c7gAixY1CgXnrStPfXpVYsiLy9sKfWZJyQWiE0mr6olEunoyRQtiC3eqm_fIDbw9fFM1puI-6nqkvljhS5H0NXoXCB3BfFjMzxRxObtaE9Kfy0YBuHR9uZdrDVc4dOu1EretBVw_si_uXnrYBWsq9D-TnlfWbxUZcLbh8HZXT",
+    imageSrc: IMAGES.insights.entrepreneurship,
     imageAlt: "Entrepreneurship article image",
     category: "Entrepreneurship",
     title: "Failure is a Draft: Redefining Pivot Culture",
@@ -57,11 +55,12 @@ export const InsightsGrid = () => {
     <section className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 max-w-7xl mx-auto px-8">
       {ARTICLES.map((article) => (
         <article key={article.title} className="flex flex-col group cursor-pointer">
-          <div className="aspect-[4/3] rounded-lg overflow-hidden bg-surface-container mb-6">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-surface-container mb-6">
             <img
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               alt={article.imageAlt}
               src={article.imageSrc}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
 

@@ -115,11 +115,42 @@ export const Footer = () => {
         </div>
 
         {/* Ghost Border applied here as a subtle fallback (outline-variant at 20%) */}
-        <div className="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-on-surface-variant">
-          <p>© {new Date().getFullYear()} Rishabh Agrawal. All rights reserved.</p>
-          <div className="flex gap-6">
-            <span>The Intellectual Architect</span>
-            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+        <div className="pt-8 border-t border-outline-variant/30 flex flex-col items-center gap-4 text-sm text-on-surface-variant">
+          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© {new Date().getFullYear()} Rishabh Agrawal. All rights reserved.</p>
+            <div className="flex gap-6">
+              <span>The Intellectual Architect</span>
+              <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            </div>
+          </div>
+          
+          {/* Developer Credit */}
+          <div className="mt-8 pt-8 border-t border-outline-variant/10 w-full flex flex-col items-center justify-center group cursor-default relative overflow-hidden">
+            {/* Subtle background glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/5 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-xl"></div>
+            
+            <p className="text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase text-on-surface-variant/50 mb-3 md:mb-4 relative z-10">
+              Architected & Developed
+            </p>
+            
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 relative z-10">
+              <span className="text-sm md:text-base text-on-surface-variant/70 font-medium">Crafted with</span>
+              <span className="text-red-500 animate-pulse text-lg md:text-xl drop-shadow-[0_0_10px_rgba(239,68,68,0.6)]">❤</span>
+              <span className="text-sm md:text-base text-on-surface-variant/70 font-medium">by</span>
+              <span 
+                className="font-bold text-2xl md:text-3xl lg:text-4xl px-2 py-1 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500"
+                style={{ 
+                  fontFamily: "'Playfair Display', 'Caveat', cursive, serif",
+                  background: "linear-gradient(45deg, #3B82F6, #8B5CF6, #EC4899, #F43F5E)",
+                  backgroundSize: "200% auto",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.1))"
+                }}
+              >
+                Shubham Pandey
+              </span>
+            </div>
           </div>
         </div>
       </div>

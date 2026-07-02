@@ -11,6 +11,7 @@
 
 import React from "react";
 import { Rocket, GraduationCap, Award } from "lucide-react";
+import { IMAGES } from "@/lib/imageConfig";
 
 export const AboutMilestones = () => {
   return (
@@ -42,7 +43,7 @@ export const AboutMilestones = () => {
               <img
                 className="w-full h-48 object-cover rounded-lg"
                 alt="Faxlab AI architecture visualization"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArxU1Mq7wHtomendANvtDvvMfzP9aHUOYKr3-hdvtV7Nckuqpk6nGLsKuzP8-1M_NA97rlrB95M_-LapbCWPfkAvbcdNowL3tzRX62H_w4KNq6wz-p19aYORAleXJUOVMH8AOk5OYaH4T-LkDsiZzqy4JLk0z7ViTtU7G02KFthZx43JWx7LKlQAdYlOiXvSMHAR6kLrGKj7HCy2nFcst3uNsLnfvHj8gARIDDJIMOXAuqaA-Q6xGxYiHXuryRWM8Oz22se2-boaXX"
+                src={IMAGES.profile.faxlab}
               />
             </div>
           </div>
@@ -57,8 +58,8 @@ export const AboutMilestones = () => {
                 potential in an age of technological transformation.
               </p>
             </div>
-            <div className="flex-shrink-0 w-24 h-32 bg-white/20 rounded shadow-lg backdrop-blur flex items-center justify-center p-2 text-center text-[10px] font-bold">
-              WHAT IF YOU ARE A SUPERHERO
+            <div className="flex-shrink-0 w-24 h-32 rounded shadow-lg overflow-hidden relative">
+              <img src={IMAGES.books.superhero2} alt="What If You Are a Superhero" className="w-full h-full object-cover" />
             </div>
           </div>
 

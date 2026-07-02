@@ -27,6 +27,9 @@ export const IMAGES = {
     // About page portrait
     aboutPortrait:
       "/images/profile/Rishabh.png",
+    // Faxlab image
+    faxlab:
+      "/images/profile/faxlab.png",
   },
 
   // ── Book Covers ───────────────────────────────────────────
@@ -35,6 +38,8 @@ export const IMAGES = {
   books: {
     superhero:
       "/images/books/Superhero1.png",
+    superhero2:
+      "/images/books/superhero2.png",
     marriageDates:
       "/images/books/My_50_arrange_marrige_dates.png",
     supplyChain:
@@ -45,8 +50,10 @@ export const IMAGES = {
   // TODO: Replace with "/images/insights/featured-article.jpg"
   //       once you add the real banner to public/images/insights/
   insights: {
-    featured:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDGZcTwKBgP4x75bX6gca_yOPSDbfYPUMXlIoKmzC1QVyMl2aqfqScaiH0S6fl8v253pbsv39K8FbdDRts4I96XPJgkEUT4BI86zG_7khIweGpgnqj5qsDXHHq1EKFgxSysdKavcIOi5t9dIRmQC6bTugOKvPBKUgGsSnKPTUO_8AGL1eCH1v2_M4DIr77JRHbrZZwvVNChCOEIjiLJ9gbaBPMooFxaYRhl3giSMFz9NdRdau8stxCf1a5hcwrOf0TtRkVGuvlj29qL",
+    featured: "/images/insights/ai-insight.png",
+    aiTech: "/images/insights/ai-tech.png",
+    narrative: "/images/insights/Narrative Strategy.png",
+    entrepreneurship: "/images/insights/Entrepreurship.png",
   },
 
   // ── Achievements ──────────────────────────────────────────
@@ -59,9 +66,9 @@ export const IMAGES = {
   
   // ── YouTube Channel / Triveni Sangam Dialogues ────────────
   youtube: {
-    logo: "/images/triveni_sangam_logo.png",
-    mantraThumbnail: "/images/mantra_thumbnail.png",
-    jyotirlingaThumbnail: "/images/jyotirlinga_thumbnail.png",
-    mahabharatThumbnail: "/images/mahabharat_thumbnail.png",
+    logo: "/images/Youtube/LOGO.png",
+    mantraThumbnail: "/images/Youtube/mantra_thumbnail.png",
+    jyotirlingaThumbnail: "/images/Youtube/jyotirlinga_thumbnail.png",
+    mahabharatThumbnail: "/images/Youtube/mahabharat_thumbnail.png",
   },
 } as const;

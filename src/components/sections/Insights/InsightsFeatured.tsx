@@ -62,11 +62,12 @@ export const InsightsFeatured = () => {
     <section className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24 max-w-7xl mx-auto px-8">
       {/* Main featured article — takes 8 of 12 columns */}
       <article className="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface shadow-sm border border-outline-variant/10">
-        <div className="aspect-video overflow-hidden">
+        <div className="relative aspect-video overflow-hidden">
           <img
             alt={FEATURED_ARTICLE.imageAlt}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             src={FEATURED_ARTICLE.imageSrc}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
         <div className="p-8">

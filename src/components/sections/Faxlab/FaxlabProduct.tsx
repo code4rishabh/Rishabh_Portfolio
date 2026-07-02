@@ -2,19 +2,22 @@
 
 import React from "react";
 import { Check } from "lucide-react";
+import { IMAGES } from "@/lib/imageConfig";
 
 export const FaxlabProduct = () => {
   return (
     <section className="py-24 px-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div className="order-2 lg:order-1">
-          <div className="relative">
+          <div className="relative group">
+            {/* Colorful blurred background for glow effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-700"></div>
             <img 
-              className="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" 
-              alt="Macro shot of a high-tech circuit board with blue and cyan neon lights, symbolizing core AI architecture" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcwIxiJUsN0hpxzVZsmRQFU6pgmZ5hPsg3KAe5dwFwpVS1YvjYeZ5qaeZz84OOJwv8XCzmrut4XHyaaQMa0uj0OQqAtdPZuIZcNDaiY3S2Fh8k1fozg_C3Il-CSmbqDX7UwqN06b0tQJlHTBxvVRV3QByKIjjRdiHGgDng8neJhJjpFmxpzygrx5TPKTmLc1FaLQlAhyib8stLDO1O7X83A3Tko25aHjFBEji3LSC0ILEZb3_WbRVpffA5mXQnJrFF-biX5UfIwzFK"
+              className="relative rounded-xl shadow-2xl transition-all duration-700 w-full h-auto object-cover group-hover:scale-[1.02]" 
+              alt="Faxlab AI Engine Architecture" 
+              src={IMAGES.profile.faxlab}
             />
-            <div className="absolute -bottom-10 -right-10 bg-surface p-6 rounded-lg shadow-xl max-w-xs hidden md:block border border-outline-variant/10">
+            <div className="absolute -bottom-10 -right-10 bg-surface p-6 rounded-lg shadow-xl max-w-xs hidden md:block border border-outline-variant/10 z-10">
               <p className="italic text-on-surface-variant font-medium">"Technology is the pen, but the logic is the story. Faxlab is the convergence of both."</p>
               <p className="mt-4 font-bold text-primary">— Risabh Agrawal</p>
             </div>

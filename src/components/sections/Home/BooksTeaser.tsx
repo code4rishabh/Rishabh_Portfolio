@@ -1,28 +1,42 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { IMAGES } from '@/lib/imageConfig';
-import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, ExternalLink, X, BookOpen, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 
 export default function BooksTeaser() {
+  const [selectedBook, setSelectedBook] = useState<{title: string, description: string, longDescription: string[], image: string, link: string} | null>(null);
+
   const books = [
     {
       title: "What If You Are a Superhero",
       description: "Exploration of human consciousness in the wake of sentient-parallel AI development.",
+      longDescription: [
+        "In this deeply philosophical exploration, we dive into what happens to the human psyche when machines can parallel or even surpass human thought. Are we losing our edge, or discovering a new form of superhero within ourselves?",
+        "Drawing from real-world advancements in neural networks and cognitive science, the book challenges readers to redefine their purpose. It provides a narrative framework to navigate a future where automation handles the mundane, leaving us to tackle the extraordinary."
+      ],
       image: IMAGES.books.superhero,
       link: "https://amzn.in/d/04YPt5mw"
     },
     {
       title: "My 50 Arranged Marriage Dates",
       description: "The untold story of building a silicon valley powerhouse from a home garage in Mumbai.",
+      longDescription: [
+        "What begins as a traditional quest for a life partner turns into a profound journey of self-discovery and entrepreneurial grit. Through 50 distinct encounters, the narrative weaves lessons of resilience, negotiation, and intuition.",
+        "It's not just a memoir about modern relationships; it's a blueprint for building a tech powerhouse. By applying the emotional intelligence learned through these dates to the cutthroat world of Silicon Valley startups, it reveals the human element behind every successful business."
+      ],
       image: IMAGES.books.marriageDates,
       link: "https://amzn.in/d/04YPt5mw"
     },
     {
       title: "Transforming Supply Chain with AI",
       description: "A practical guide to leveraging AI, machine learning, and automation to optimize modern supply chain networks.",
+      longDescription: [
+        "Modern supply chains are fraught with inefficiencies, unpredictable disruptions, and siloed data. This book serves as a definitive guide to dismantling these traditional barriers using applied machine learning and automation.",
+        "From predictive inventory management to autonomous logistics routing, we cover the exact frameworks needed to transition from reactive operations to a proactive, AI-driven supply chain ecosystem."
+      ],
       image: IMAGES.books.supplyChain,
       link: "https://amzn.in/d/06E5erf2"
     }
@@ -69,11 +83,9 @@ export default function BooksTeaser() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <a 
-                href={book.link} 
-                target={book.link.startsWith('http') ? "_blank" : "_self"}
-                rel="noopener noreferrer" 
-                className="block"
+              <div 
+                onClick={() => setSelectedBook(book)}
+                className="block cursor-pointer"
               >
                 <div className="aspect-[3/4.5] bg-surface-container-high rounded-2xl overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl transition-all duration-500">
                   <img
@@ -93,14 +105,84 @@ export default function BooksTeaser() {
                 <p className="text-on-surface-variant mb-6 line-clamp-2 leading-relaxed">{book.description}</p>
                 
                 <div className="flex items-center gap-2 text-primary font-bold group/btn">
-                  <span className="border-b-2 border-transparent group-hover/btn:border-primary transition-all">Get Your Copy</span>
+                  <span className="border-b-2 border-transparent group-hover/btn:border-primary transition-all">View Details</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </div>
-              </a>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedBook && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            onClick={() => setSelectedBook(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
+              className="bg-surface p-8 md:p-10 rounded-3xl shadow-2xl max-w-4xl w-full relative border border-outline-variant/20 overflow-hidden flex flex-col md:flex-row gap-8 items-center md:items-start"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Decorative Glow */}
+              <div className="absolute -top-32 -left-32 w-64 h-64 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+              
+              <button 
+                onClick={() => setSelectedBook(null)}
+                className="absolute top-6 right-6 text-on-surface-variant hover:text-primary transition-colors bg-surface-container-high rounded-full p-2 cursor-pointer border-none"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="w-full md:w-1/3 flex-shrink-0">
+                <div className="aspect-[3/4.5] rounded-xl overflow-hidden shadow-xl border border-outline-variant/10">
+                  <img src={selectedBook.image} alt={selectedBook.title} className="w-full h-full object-cover" />
+                </div>
+              </div>
+
+              <div className="w-full md:w-2/3 flex flex-col relative z-10">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4 self-start">
+                  <BookOpen className="w-4 h-4" />
+                  Featured Book
+                </div>
+                
+                <h3 className="text-3xl md:text-4xl font-bold font-display text-on-surface mb-4 leading-tight">{selectedBook.title}</h3>
+                
+                <div className="text-on-surface-variant text-lg leading-relaxed mb-8 space-y-4">
+                  {selectedBook.longDescription.map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
+
+                <div className="mt-auto pt-6 border-t border-outline-variant/10 flex flex-col sm:flex-row items-center gap-4">
+                  <a 
+                    href={selectedBook.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto bg-primary text-on-primary px-8 py-3.5 rounded-xl font-bold hover:shadow-lg hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+                  >
+                    <ShoppingCart className="w-5 h-5" />
+                    Buy on Amazon
+                  </a>
+                  <button 
+                    onClick={() => setSelectedBook(null)}
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-on-surface-variant hover:bg-surface-container-highest transition-colors cursor-pointer border-none bg-transparent"
+                  >
+                    Close Details
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

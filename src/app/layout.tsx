@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 export default function RootLayout({
   children,
@@ -38,6 +39,7 @@ export default function RootLayout({
         <main className="flex-grow bg-surface relative z-0">
           {children}
         </main>
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>

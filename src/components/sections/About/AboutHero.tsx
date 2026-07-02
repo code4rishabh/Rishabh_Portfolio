@@ -8,7 +8,7 @@ export const AboutHero = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center overflow-hidden">
       {/* Left: Text content */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
@@ -39,7 +39,7 @@ export const AboutHero = () => {
       </motion.div>
 
       {/* Right: Portrait image */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
