@@ -30,7 +30,7 @@ const BOOKS = [
     title: "My 50 Arranged Marriage Dates",
     description:
       "A hilarious and heartfelt account of navigating modern arranged marriages, dating, and human connection.",
-    year: "2022",
+    year: "2026",
     genre: "Humor / Memoir",
     amazonHref: "https://amzn.in/d/04YPt5mw", // ← Update with real Amazon link
     coverSrc: IMAGES.books.marriageDates,
@@ -40,7 +40,7 @@ const BOOKS = [
     title: "Transforming Supply Chain with AI",
     description:
       "A practical guide to leveraging AI, machine learning, and automation to optimize modern supply chain networks.",
-    year: "2024",
+    year: "2026",
     genre: "Technology / Business",
     amazonHref: "https://amzn.in/d/06E5erf2",
     coverSrc: IMAGES.books.supplyChain,

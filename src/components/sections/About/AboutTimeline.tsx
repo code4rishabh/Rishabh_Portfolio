@@ -140,7 +140,7 @@ export const AboutTimeline = () => {
             </h3>
             <ul className="space-y-5">
               {[
-                { label: "15+ Years", desc: "Global Industry Experience" },
+                { label: "20+ Years", desc: "Global Industry Experience" },
                 { label: "AI & Tech", desc: "Enterprise Digital Transformation" },
                 { label: "Strategic", desc: "Board Member & Founder Level" },
                 { label: "Operations", desc: "Mega EPC & Supply Chain Mgmt" }

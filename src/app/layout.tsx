@@ -13,8 +13,36 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Rishabh Agrawal | Author Site",
-  description: "The Intellectual Architect - Bridging SaaS precision with editorial layout.",
+  metadataBase: new URL('https://rishabhagrawal.in'),
+  title: {
+    default: "Rishabh Agrawal | AI Entrepreneur, Author & Tech Visionary",
+    template: "%s | Rishabh Agrawal"
+  },
+  description: "Official portfolio of Rishabh Agrawal - Author of 'My 50 Arranged Marriage Dates', Founder of Faxlab AI, and thought leader in generative AI and cognitive science.",
+  keywords: ["Rishabh Agrawal", "AI Entrepreneur", "Faxlab AI", "My 50 Arranged Marriage Dates", "Tech Author", "Generative AI"],
+  authors: [{ name: "Rishabh Agrawal" }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://rishabhagrawal.in",
+    siteName: "Rishabh Agrawal Portfolio",
+    title: "Rishabh Agrawal | AI Entrepreneur, Author & Tech Visionary",
+    description: "Official portfolio of Rishabh Agrawal - Author, Founder of Faxlab AI, and tech visionary.",
+    images: [
+      {
+        url: "/images/hero/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rishabh Agrawal",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rishabh Agrawal | AI Entrepreneur & Author",
+    description: "Official portfolio of Rishabh Agrawal - Author, Founder of Faxlab AI, and tech visionary.",
+    images: ["/images/hero/hero.jpg"],
+  },
 };
 
 import { Header } from "@/components/layout/Header";

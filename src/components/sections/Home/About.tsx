@@ -61,7 +61,7 @@ export default function About() {
                   <Star className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-on-surface text-lg">15+ Years</h4>
+                  <h4 className="font-bold text-on-surface text-lg">20+ Years</h4>
                   <p className="text-sm text-on-surface-variant">Global industry &amp; tech experience</p>
                 </div>
               </div>

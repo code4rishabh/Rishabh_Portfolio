@@ -17,11 +17,11 @@ const YoutubeIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export const YOUTUBE_CONFIG = {
   channelName: "Triveni Sangam Dialogues",
   channelUrl: "https://youtube.com/@trivenisangamdialogues?si=oNjirLtBRAujpySj",
-  subscriberCount: "120K+",
+  subscriberCount: "180K+",
   videoCount: "150+",
   description: "A digital sanctuary for seeking truth, wisdom, and cosmic understanding. Delving into the depths of Sanatan Dharma, ancient scriptures, Jyotirlingas, Mahabharat, and the intersection of traditional mysticism with modern scientific consciousness.",
   stats: [
-    { icon: Users, label: "Subscribers", value: "120K+" },
+    { icon: Users, label: "Subscribers", value: "180K+" },
     { icon: Award, label: "Verified Channel", value: "Official Partner" },
     { icon: TrendingUp, label: "Topics covered", value: "Spirituality & Logic" }
   ],
@@ -75,12 +75,12 @@ export default function YoutubeChannel() {
   return (
     <section id="youtube-channel" className="py-12 md:py-20 bg-surface-container-low overflow-hidden border-t border-b border-outline-variant/10">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        
+
         {/* Main Section Grid: Left Content / Channel Card, Right Info */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center mb-20">
-          
+
           {/* Left Column: Interactive Channel Card (4/12 width) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -88,21 +88,21 @@ export default function YoutubeChannel() {
             className="lg:col-span-5 relative"
           >
             <div className="absolute -inset-1.5 bg-gradient-to-r from-red-600 via-orange-500 to-amber-500 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-            
+
             {/* The Actual Premium Card */}
             <div className="relative bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 md:p-10 shadow-2xl flex flex-col items-center text-center">
-              
+
               {/* YouTube Play Icon Badge */}
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-red-600 text-white p-3 rounded-2xl shadow-lg flex items-center justify-center">
                 <YoutubeIcon className="w-8 h-8 fill-current" />
               </div>
-              
+
               {/* Channel Avatar/Logo with Glowing Border */}
               <div className="relative mt-4 mb-6">
                 <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-surface shadow-xl relative z-10 bg-surface-container-high flex items-center justify-center">
-                  <img 
-                    src={IMAGES.youtube.logo} 
-                    alt={YOUTUBE_CONFIG.channelName} 
+                  <img
+                    src={IMAGES.youtube.logo}
+                    alt={YOUTUBE_CONFIG.channelName}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                     onError={(e) => {
                       // Fallback if image fails to load
@@ -125,7 +125,7 @@ export default function YoutubeChannel() {
                   ✓
                 </span>
               </div>
-              
+
               <span className="text-sm font-semibold tracking-wider uppercase text-red-600 mb-6 flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
                 Official Channel
@@ -160,7 +160,7 @@ export default function YoutubeChannel() {
           </motion.div>
 
           {/* Right Column: Narrative & Philosophy (7/12 width) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -175,11 +175,11 @@ export default function YoutubeChannel() {
                 Triveni Sangam Dialogues
               </h2>
               <div className="w-16 h-1.5 bg-gradient-to-r from-red-600 to-orange-500 rounded-full mb-8"></div>
-              
+
               <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-6">
                 {YOUTUBE_CONFIG.description}
               </p>
-              
+
               <p className="text-base text-on-surface-variant/80 leading-relaxed">
                 As a extension of my storytelling and philosophical exploration, Triveni Sangam Dialogues serves as a public audio-visual archive. Here, logic and devotion converge, building an intellectual platform where viewers explore ancient traditions through a modern, critical, and respectful lens.
               </p>
@@ -228,7 +228,7 @@ export default function YoutubeChannel() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <a 
+              <a
                 href={YOUTUBE_CONFIG.channelUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -241,7 +241,7 @@ export default function YoutubeChannel() {
           </div>
 
           {/* Cards Grid */}
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -254,7 +254,7 @@ export default function YoutubeChannel() {
                 variants={itemVariants}
                 className="group bg-surface-container-lowest rounded-2xl border border-outline-variant/10 overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full"
               >
-                <a 
+                <a
                   href={video.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -263,19 +263,19 @@ export default function YoutubeChannel() {
                   {/* Decorative Video Thumbnail Mockup (using real generated image, beautiful gradients and play badge) */}
                   <div className="aspect-video w-full relative flex items-center justify-center overflow-hidden border-b border-outline-variant/5">
                     {/* Real Video Thumbnail Image */}
-                    <img 
-                      src={video.image} 
-                      alt={video.title} 
+                    <img
+                      src={video.image}
+                      alt={video.title}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    
+
                     {/* Beautiful warm gradient overlay to unify the brand aesthetics */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 mix-blend-multiply opacity-90 transition-opacity duration-300 group-hover:opacity-80" />
                     <div className={`absolute inset-0 bg-gradient-to-br ${video.gradient} opacity-40 mix-blend-color-dodge`} />
-                    
+
                     {/* Overlay Grid lines for tech-spiritual aesthetic */}
                     <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:14px_24px]" />
-                    
+
                     {/* Glowing Play Icon Container */}
                     <div className="relative w-14 h-14 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all duration-500 group-hover:scale-115 group-hover:bg-[#FF0000] group-hover:border-red-500 shadow-lg group-hover:shadow-red-500/50 z-10">
                       <Play className="w-6 h-6 fill-current translate-x-0.5" />
@@ -293,15 +293,15 @@ export default function YoutubeChannel() {
                       <span className="w-1.5 h-1.5 rounded-full bg-red-600" />
                       {video.views}
                     </span>
-                    
+
                     <h4 className="font-display font-bold text-lg md:text-xl text-on-surface mb-3 leading-snug group-hover:text-primary transition-colors line-clamp-2">
                       {video.title}
                     </h4>
-                    
+
                     <p className="text-sm text-on-surface-variant line-clamp-3 leading-relaxed flex-1">
                       {video.description}
                     </p>
-                    
+
                     <div className="flex items-center justify-between pt-6 mt-6 border-t border-outline-variant/10 text-primary font-bold text-sm group/btn">
                       <span className="group-hover:text-red-600 transition-colors">Watch Episode</span>
                       <Play className="w-4 h-4 text-primary group-hover:text-red-600 group-hover/btn:translate-x-1 transition-all" />

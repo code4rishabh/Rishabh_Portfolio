@@ -34,7 +34,7 @@ const FEATURED_BOOKS = [
     description:
       "A hilarious and heartfelt account of navigating modern arranged marriages, dating, and human connection in the digital age.",
     amazonHref: "https://amzn.in/d/04YPt5mw", // ← Update with real Amazon link
-    published: "2022",
+    published: "2026",
     format: "Paperback, Digital",
   },
 ];

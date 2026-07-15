@@ -98,7 +98,7 @@ export const FaxlabMission = () => {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
               transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
-              className="bg-surface p-8 md:p-10 rounded-2xl shadow-2xl max-w-lg w-full relative border border-outline-variant/20 overflow-hidden"
+              className="bg-surface p-8 md:p-10 rounded-2xl shadow-2xl max-w-lg w-full relative border border-outline-variant/20 overflow-y-auto max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Decorative Glow */}

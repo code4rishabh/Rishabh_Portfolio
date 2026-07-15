@@ -29,7 +29,7 @@ const EmailIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 const socialLinks = [
-  { icon: LinkedinIcon, href: "https://shorturl.at/hda0Q", label: "LinkedIn", hoverColor: "hover:text-[#0077b5]" },
+  { icon: LinkedinIcon, href: "https://www.linkedin.com/in/rishabhagarwaliimc?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn", hoverColor: "hover:text-[#0077b5]" },
   { icon: YoutubeIcon, href: "https://youtube.com/@trivenisangamdialogues?si=oNjirLtBRAujpySj", label: "YouTube", hoverColor: "hover:text-[#FF0000]" },
   { icon: InstagramIcon, href: "https://www.instagram.com/trivenisangamdialogues?igsh=MTRyZzQ4MHhia25paw==", label: "Instagram", hoverColor: "hover:text-[#E4405F]" },
   { icon: EmailIcon, href: "https://mail.google.com/mail/?view=cm&fs=1&to=rishabhbenz@gmail.com", label: "Email", hoverColor: "hover:text-[#EA4335]" },
@@ -37,9 +37,9 @@ const socialLinks = [
 
 const footerLinks = [
   { name: "Faxlab AI", href: "https://www.faxlab.in/" },
-  { name: "Insights & Essays", href: "#insights" },
-  { name: "Books", href: "https://amzn.in/d/04YPt5mw" },
-  { name: "About", href: "#about" },
+  { name: "Insights & Essays", href: "/insights" },
+  { name: "Books", href: "/books" },
+  { name: "About", href: "/about" },
   { name: "Privacy Policy", href: "/privacy" },
 ];
 
@@ -82,16 +82,21 @@ export const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-on-surface font-display font-semibold uppercase tracking-wider text-sm">Navigation</h3>
             <ul className="space-y-4">
-              {footerLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-base text-on-surface-variant hover:text-primary transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              {footerLinks.map((link) => {
+                const isExternal = link.href.startsWith("http");
+                return (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noopener noreferrer" : undefined}
+                      className="text-base text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -123,23 +128,23 @@ export const Footer = () => {
               <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
             </div>
           </div>
-          
+
           {/* Developer Credit */}
           <div className="mt-8 pt-8 border-t border-outline-variant/10 w-full flex flex-col items-center justify-center group cursor-default relative overflow-hidden">
             {/* Subtle background glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/5 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-xl"></div>
-            
+
             <p className="text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase text-on-surface-variant/50 mb-3 md:mb-4 relative z-10">
               Architected & Developed
             </p>
-            
+
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 relative z-10">
               <span className="text-sm md:text-base text-on-surface-variant/70 font-medium">Crafted with</span>
               <span className="text-red-500 animate-pulse text-lg md:text-xl drop-shadow-[0_0_10px_rgba(239,68,68,0.6)]">❤</span>
               <span className="text-sm md:text-base text-on-surface-variant/70 font-medium">by</span>
-              <span 
+              <span
                 className="font-bold text-2xl md:text-3xl lg:text-4xl px-2 py-1 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500"
-                style={{ 
+                style={{
                   fontFamily: "'Playfair Display', 'Caveat', cursive, serif",
                   background: "linear-gradient(45deg, #3B82F6, #8B5CF6, #EC4899, #F43F5E)",
                   backgroundSize: "200% auto",
