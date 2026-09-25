@@ -48,7 +48,7 @@ export const AboutHero = () => {
         <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-10 border border-outline-variant/10">
           <img
             className="w-full h-full object-cover"
-            alt="Rishabh Agrawal - Founder of Faxlab AI and Author"
+            alt="Rishabh Agarwal - Founder of Faxlab AI and Author"
             src={IMAGES.profile.aboutPortrait}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />

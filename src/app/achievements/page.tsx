@@ -1,62 +1,52 @@
-// ============================================================
-// app/achievements/page.tsx
-// Route: /achievements
-// Assembles all Achievements section components.
-// To add/remove sections, import and place components here.
-// ============================================================
+import type { Metadata } from "next";
 
-import React from "react";
-import { AchievementsHero } from "@/components/sections/Achievements/AchievementsHero";
-import { AchievementsAwards } from "@/components/sections/Achievements/AchievementsAwards";
-import { AchievementsTimeline } from "@/components/sections/Achievements/AchievementsTimeline";
-import Link from "next/link";
-
-export const metadata = {
-  title: "Achievements & Milestones – Rishabh Agrawal",
+export const metadata: Metadata = {
+  title: "Selected Work",
   description:
-    "Awards, recognition, and the professional journey of Rishabh Agrawal — founder of Faxlab AI and published author.",
+    "Selected work by Rishabh Agarwal across FaxLab AI, Triveni Sangam Dialogues, books and public talks.",
+  alternates: { canonical: "/achievements" },
 };
+
+const work = [
+  {
+    title: "Founded FaxLab AI",
+    description: "An AI education and business automation initiative.",
+    href: "https://faxlab.in/",
+  },
+  {
+    title: "Created Triveni Sangam Dialogues",
+    description: "A channel for conversations about Indian traditions and modern life.",
+    href: "https://trivenisangamdialogues.in/",
+  },
+  {
+    title: "Published books",
+    description: "Writing about personal growth, relationships, AI and supply chains.",
+    href: "/books",
+  },
+  {
+    title: "Spoke on ethical AI at Jaipuria Institute of Management",
+    description: "A public session on bias, transparency, accountability and human judgment.",
+    href: "https://www.youtube.com/watch?v=cUBy2KbQJ_s",
+  },
+];
 
 export default function AchievementsPage() {
   return (
-    <div className="relative overflow-hidden pt-16">
-      {/* Hero with floating stat card */}
-      <AchievementsHero />
-
-      {/* Awards bento grid */}
-      <AchievementsAwards />
-
-      {/* Alternating professional timeline */}
-      <AchievementsTimeline />
-
-      {/* CTA Section */}
-      <section className="py-32 px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-display font-bold mb-8">
-            Ready to build the future together?
-          </h2>
-          <p className="text-xl text-on-surface-variant mb-12">
-            Whether you have a groundbreaking idea or a story that needs to
-            be told, let&apos;s connect.
-          </p>
-          <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <Link
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=rishabhbenz@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary text-on-primary px-10 py-4 rounded-md font-bold text-lg hover:scale-105 transition-transform text-center"
-            >
-              Get in Touch
-            </Link>
-            <Link
-              href="/books"
-              className="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-md font-bold text-lg hover:bg-surface-container-high transition-colors text-center"
-            >
-              Explore My Books
-            </Link>
-          </div>
-        </div>
-      </section>
+    <div className="max-w-6xl mx-auto px-6 md:px-8 py-24 md:py-32">
+      <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Professional work</p>
+      <h1 className="font-display font-bold mb-6">Selected Work</h1>
+      <p className="text-lg text-on-surface-variant max-w-3xl mb-12">
+        A concise record of projects, publishing and public conversations.
+      </p>
+      <div className="grid gap-6 md:grid-cols-2">
+        {work.map((item) => (
+          <a key={item.title} href={item.href} className="block rounded-2xl bg-surface-container-low p-8 hover:bg-surface-container-high transition-colors">
+            <h2 className="font-display font-bold text-2xl mb-3">{item.title}</h2>
+            <p className="text-on-surface-variant mb-5">{item.description}</p>
+            <span className="text-primary font-semibold">Explore ↗</span>
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

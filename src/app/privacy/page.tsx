@@ -2,8 +2,9 @@ import React from "react";
 import { Shield } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy – Rishabh Agrawal",
-  description: "Privacy Policy for Rishabh Agrawal's official website.",
+  title: "Privacy Policy",
+  description: "Privacy Policy for Rishabh Agarwal's official website.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
@@ -21,7 +22,7 @@ export default function PrivacyPage() {
 
       <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary-container text-on-surface-variant">
         <p className="lead text-xl mb-8">
-          This Privacy Policy describes how your personal information is collected, used, and shared when you visit or interact with Rishabh Agrawal's official website and services.
+          This Privacy Policy describes how your personal information is collected, used, and shared when you visit or interact with Rishabh Agarwal's official website and services.
         </p>
 
         <h2 className="text-2xl mt-12 mb-4 text-on-surface">1. Information We Collect</h2>

@@ -14,10 +14,11 @@ function cn(...inputs: ClassValue[]) {
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Achievements", href: "/achievements" },
-  { name: "Faxlab AI", href: "/faxlab" },
+  { name: "Selected Work", href: "/achievements" },
+  { name: "FaxLab AI", href: "/faxlab" },
   { name: "Books", href: "/books" },
   { name: "Insights", href: "/insights" },
+  { name: "Appearances", href: "/appearances" },
 ];
 
 export const Header = () => {
@@ -57,7 +58,7 @@ export const Header = () => {
         {/* Logo - Textual, Space Grotesk */}
         <Link href="/" className="flex items-center gap-2 group min-w-0">
           <span className="text-xl md:text-2xl font-bold font-display tracking-tight text-on-surface truncate">
-            Rishabh Agrawal
+            Rishabh Agarwal
           </span>
         </Link>
 

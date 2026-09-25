@@ -3,7 +3,7 @@
 import React from 'react';
 import { IMAGES } from '@/lib/imageConfig';
 import { motion } from 'framer-motion';
-import { ExternalLink, Play, Users, Award, TrendingUp } from 'lucide-react';
+import { ExternalLink, Play } from 'lucide-react';
 
 const YoutubeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -16,42 +16,32 @@ const YoutubeIcon = (props: React.SVGProps<SVGSVGElement>) => (
 // ============================================================
 export const YOUTUBE_CONFIG = {
   channelName: "Triveni Sangam Dialogues",
-  channelUrl: "https://youtube.com/@trivenisangamdialogues?si=oNjirLtBRAujpySj",
-  subscriberCount: "180K+",
-  videoCount: "150+",
-  description: "A digital sanctuary for seeking truth, wisdom, and cosmic understanding. Delving into the depths of Sanatan Dharma, ancient scriptures, Jyotirlingas, Mahabharat, and the intersection of traditional mysticism with modern scientific consciousness.",
-  stats: [
-    { icon: Users, label: "Subscribers", value: "180K+" },
-    { icon: Award, label: "Verified Channel", value: "Official Partner" },
-    { icon: TrendingUp, label: "Topics covered", value: "Spirituality & Logic" }
-  ],
+  channelUrl: "https://www.youtube.com/@TriveniSangamDialogues",
+  description: "Conversations about Indian traditions, ideas, and the questions that connect them to modern life.",
   featuredVideos: [
     {
-      title: "The Cosmic Resonance of Mantras: Sound, Science & Spirituality",
-      description: "An in-depth exploration of ancient Vedic chants and how sound frequencies interact with the human brain and consciousness.",
-      duration: "18:24",
-      views: "45K views",
+      title: "From Ujjain to Universe: Is Astrology a Cosmic Code?",
+      description: "Rishabh Agarwal in conversation with astrologer Rupika Datta.",
+      source: "Triveni Sangam Dialogues",
       gradient: "from-amber-600/30 via-orange-600/20 to-stone-900",
-      image: IMAGES.youtube.mantraThumbnail,
-      link: "https://youtube.com/@trivenisangamdialogues?si=oNjirLtBRAujpySj"
+      image: "https://i.ytimg.com/vi/L1R797mgOiM/hqdefault.jpg",
+      link: "https://www.youtube.com/watch?v=L1R797mgOiM"
     },
     {
-      title: "Deciphering the 12 Jyotirlingas: Energy Centers of the Cosmos",
-      description: "A fascinating journey mapping the sacred temples of Shiva, exploring their astronomical alignments and cosmic energy structures.",
-      duration: "24:15",
-      views: "82K views",
+      title: "Work-Life Balance and the 70-Hour Work Week",
+      description: "An Edu Attack conversation with Rishabh Agarwal on work and productivity.",
+      source: "Edu Attack",
       gradient: "from-red-700/30 via-orange-500/20 to-stone-900",
-      image: IMAGES.youtube.jyotirlingaThumbnail,
-      link: "https://youtube.com/@trivenisangamdialogues?si=oNjirLtBRAujpySj"
+      image: "https://i.ytimg.com/vi/Vm5ZOnygdIs/hqdefault.jpg",
+      link: "https://www.youtube.com/watch?v=Vm5ZOnygdIs"
     },
     {
-      title: "The Mahabharat Philosophy: Dharma in the Age of Chaos",
-      description: "Unraveling the timeless lessons of the Gita and Mahabharat, applying ancient strategies to modern leadership and psychological resilience.",
-      duration: "32:40",
-      views: "112K views",
+      title: "Ethical AI: Bias, Transparency & Human Judgment",
+      description: "A Jaipuria Institute of Management session with Rishabh Agarwal.",
+      source: "Jaipuria Institute of Management",
       gradient: "from-orange-700/30 via-amber-500/20 to-stone-900",
-      image: IMAGES.youtube.mahabharatThumbnail,
-      link: "https://youtube.com/@trivenisangamdialogues?si=oNjirLtBRAujpySj"
+      image: "https://i.ytimg.com/vi/cUBy2KbQJ_s/hqdefault.jpg",
+      link: "https://www.youtube.com/watch?v=cUBy2KbQJ_s"
     }
   ]
 };
@@ -120,28 +110,12 @@ export default function YoutubeChannel() {
                 <h3 className="text-2xl md:text-3xl font-display font-bold text-on-surface">
                   {YOUTUBE_CONFIG.channelName}
                 </h3>
-                {/* YouTube Verified Checkmark */}
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-500 text-white text-[10px] font-bold" title="Verified Creator">
-                  ✓
-                </span>
               </div>
 
               <span className="text-sm font-semibold tracking-wider uppercase text-red-600 mb-6 flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
                 Official Channel
               </span>
-
-              {/* Stats Counters */}
-              <div className="grid grid-cols-2 gap-4 w-full mb-8 pt-6 border-t border-outline-variant/10">
-                <div className="text-center p-3 bg-surface rounded-xl border border-outline-variant/5">
-                  <p className="text-2xl font-bold font-display text-on-surface">{YOUTUBE_CONFIG.subscriberCount}</p>
-                  <p className="text-xs text-on-surface-variant font-medium">Subscribers</p>
-                </div>
-                <div className="text-center p-3 bg-surface rounded-xl border border-outline-variant/5">
-                  <p className="text-2xl font-bold font-display text-on-surface">{YOUTUBE_CONFIG.videoCount}</p>
-                  <p className="text-xs text-on-surface-variant font-medium">Videos Published</p>
-                </div>
-              </div>
 
               {/* Main YouTube CTA Link */}
               <motion.a
@@ -185,23 +159,6 @@ export default function YoutubeChannel() {
               </p>
             </div>
 
-            {/* Benefit Highlights */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-              {YOUTUBE_CONFIG.stats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="p-2.5 rounded-lg bg-red-50 text-red-600">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-on-surface text-base leading-tight mb-0.5">{stat.value}</h4>
-                      <p className="text-xs text-on-surface-variant">{stat.label}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
           </motion.div>
         </div>
 
@@ -218,7 +175,7 @@ export default function YoutubeChannel() {
                 Featured Discussions
               </h3>
               <p className="text-on-surface-variant text-base mt-2 max-w-xl">
-                Tune in to some of our most intellectually stimulating episodes and spiritual explorations.
+                 Watch selected conversations with Rishabh Agarwal across these channels.
               </p>
             </motion.div>
 
@@ -281,18 +238,11 @@ export default function YoutubeChannel() {
                       <Play className="w-6 h-6 fill-current translate-x-0.5" />
                     </div>
 
-                    {/* YouTube Watermark Icon */}
-                    <div className="absolute bottom-3 right-3 bg-black/75 text-white px-2.5 py-1 rounded text-xs font-bold font-mono tracking-wider z-10">
-                      {video.duration}
-                    </div>
                   </div>
 
                   {/* Card Body */}
                   <div className="p-6 flex flex-col flex-1">
-                    <span className="text-[11px] font-bold text-red-600 uppercase tracking-widest mb-3 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-600" />
-                      {video.views}
-                    </span>
+                    <span className="text-[11px] font-bold text-red-600 uppercase tracking-widest mb-3">{video.source}</span>
 
                     <h4 className="font-display font-bold text-lg md:text-xl text-on-surface mb-3 leading-snug group-hover:text-primary transition-colors line-clamp-2">
                       {video.title}

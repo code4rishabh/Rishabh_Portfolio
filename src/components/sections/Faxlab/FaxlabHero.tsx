@@ -21,7 +21,7 @@ export const FaxlabHero = () => {
             Faxlab AI: <span className="text-primary">Intelligence</span> Redefined.
           </h1>
           <p className="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-            As the founder of Faxlab AI, Rishabh Agrawal bridges the gap between literary narrative and technological precision, building AI systems that don't just process data—they understand intent.
+            As the founder of Faxlab AI, Rishabh Agarwal bridges the gap between literary narrative and technological precision, building AI systems that don't just process data—they understand intent.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -45,7 +45,7 @@ export const FaxlabHero = () => {
           <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10">
             <img
               className="w-full h-full object-cover"
-              alt="Rishabh Agrawal"
+              alt="Rishabh Agarwal"
               src={IMAGES.profile.faxlab}
             />
           </div>

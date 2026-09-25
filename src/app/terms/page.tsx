@@ -2,8 +2,9 @@ import React from "react";
 import { FileText } from "lucide-react";
 
 export const metadata = {
-  title: "Terms of Service – Rishabh Agrawal",
-  description: "Terms of Service for Rishabh Agrawal's official website.",
+  title: "Terms of Service",
+  description: "Terms of Service for Rishabh Agarwal's official website.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {
@@ -21,7 +22,7 @@ export default function TermsPage() {
 
       <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-a:text-secondary hover:prose-a:text-secondary-container text-on-surface-variant">
         <p className="lead text-xl mb-8">
-          Welcome to Rishabh Agrawal's official portfolio and digital presence. By accessing or using this website, you agree to be bound by these Terms of Service.
+          Welcome to Rishabh Agarwal's official portfolio and digital presence. By accessing or using this website, you agree to be bound by these Terms of Service.
         </p>
 
         <h2 className="text-2xl mt-12 mb-4 text-on-surface">1. Acceptance of Terms</h2>
@@ -31,7 +32,7 @@ export default function TermsPage() {
 
         <h2 className="text-2xl mt-12 mb-4 text-on-surface">2. Intellectual Property Rights</h2>
         <p>
-          All content, including texts, insights, essays, books metadata, images, and brand assets (including Faxlab AI and other intellectual properties) are the exclusive property of Rishabh Agrawal and its licensors. Unauthorized use, reproduction, or distribution is strictly prohibited.
+          All content, including texts, insights, essays, books metadata, images, and brand assets (including Faxlab AI and other intellectual properties) are the exclusive property of Rishabh Agarwal and its licensors. Unauthorized use, reproduction, or distribution is strictly prohibited.
         </p>
 
         <h2 className="text-2xl mt-12 mb-4 text-on-surface">3. Use of Content</h2>
@@ -51,7 +52,7 @@ export default function TermsPage() {
 
         <h2 className="text-2xl mt-12 mb-4 text-on-surface">5. Modifications</h2>
         <p>
-          Rishabh Agrawal reserves the right to revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+          Rishabh Agarwal reserves the right to revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
         </p>
 
         <h2 className="text-2xl mt-12 mb-4 text-on-surface">6. Contact Information</h2>

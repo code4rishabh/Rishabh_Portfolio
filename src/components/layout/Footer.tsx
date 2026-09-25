@@ -29,14 +29,18 @@ const EmailIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 const socialLinks = [
-  { icon: LinkedinIcon, href: "https://www.linkedin.com/in/rishabhagarwaliimc?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn", hoverColor: "hover:text-[#0077b5]" },
-  { icon: YoutubeIcon, href: "https://youtube.com/@trivenisangamdialogues?si=oNjirLtBRAujpySj", label: "YouTube", hoverColor: "hover:text-[#FF0000]" },
-  { icon: InstagramIcon, href: "https://www.instagram.com/trivenisangamdialogues?igsh=MTRyZzQ4MHhia25paw==", label: "Instagram", hoverColor: "hover:text-[#E4405F]" },
+  { icon: LinkedinIcon, href: "https://www.linkedin.com/in/rishabhagarwaliimc/", label: "Rishabh Agarwal on LinkedIn", hoverColor: "hover:text-[#0077b5]" },
+  { icon: YoutubeIcon, href: "https://www.youtube.com/@TriveniSangamDialogues", label: "Triveni Sangam Dialogues on YouTube", hoverColor: "hover:text-[#FF0000]" },
+  { icon: InstagramIcon, href: "https://www.instagram.com/trivenisangamdialogues/", label: "Triveni Sangam Dialogues on Instagram", hoverColor: "hover:text-[#E4405F]" },
   { icon: EmailIcon, href: "https://mail.google.com/mail/?view=cm&fs=1&to=rishabhbenz@gmail.com", label: "Email", hoverColor: "hover:text-[#EA4335]" },
 ];
 
 const footerLinks = [
-  { name: "Faxlab AI", href: "https://www.faxlab.in/" },
+  { name: "FaxLab AI", href: "https://faxlab.in/" },
+  { name: "Triveni Sangam Dialogues", href: "https://trivenisangamdialogues.in/" },
+  { name: "Goodreads author page", href: "https://www.goodreads.com/author/show/57744925.Rishabh_Agarwal" },
+  { name: "Amazon author page", href: "https://www.amazon.in/stores/author/B0F4K2RZNV" },
+  { name: "Videos & appearances", href: "/appearances" },
   { name: "Insights & Essays", href: "/insights" },
   { name: "Books", href: "/books" },
   { name: "About", href: "/about" },
@@ -53,7 +57,7 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
               <span className="text-2xl font-bold font-display tracking-tight text-on-surface">
-                Rishabh Agrawal
+                Rishabh Agarwal
               </span>
             </Link>
             <p className="text-on-surface-variant text-base max-w-sm leading-relaxed">
@@ -122,7 +126,7 @@ export const Footer = () => {
         {/* Ghost Border applied here as a subtle fallback (outline-variant at 20%) */}
         <div className="pt-8 border-t border-outline-variant/30 flex flex-col items-center gap-4 text-sm text-on-surface-variant">
           <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>© {new Date().getFullYear()} Rishabh Agrawal. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Rishabh Agarwal. All rights reserved.</p>
             <div className="flex gap-6">
               <span>The Intellectual Architect</span>
               <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>

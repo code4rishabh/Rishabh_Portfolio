@@ -20,8 +20,8 @@ export const BooksHero = () => {
           </span>
 
           <h1 className="font-display font-bold text-on-surface leading-[1.1] tracking-tight">
-            Books that bridge <br />
-            <span className="text-primary italic">Tech and Narrative.</span>
+            Books on <br />
+            <span className="text-primary italic">Work and Life.</span>
           </h1>
         </motion.div>
 
@@ -33,8 +33,7 @@ export const BooksHero = () => {
           className="lg:col-span-4 border-l-2 md:border-l-4 border-primary/20 pl-6 pb-2"
         >
           <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed">
-            A curated collection of explorations into artificial intelligence,
-            digital philosophy, and the future of human-machine synthesis.
+            Writing on personal growth, relationships, and the practical use of AI in supply chains.
           </p>
         </motion.div>
       </div>

@@ -11,9 +11,10 @@ import { BooksFeatured } from "@/components/sections/Books/BooksFeatured";
 import { BooksGrid } from "@/components/sections/Books/BooksGrid";
 
 export const metadata = {
-  title: "Books – Rishabh Agrawal",
+  title: "Books",
   description:
-    "Explore books by Rishabh Agrawal that bridge technology, AI, and human narrative.",
+    "Explore books by Rishabh Agarwal that bridge technology, AI, and human narrative.",
+  alternates: { canonical: "/books" },
 };
 
 export default function BooksPage() {
@@ -28,29 +29,17 @@ export default function BooksPage() {
       {/* Full bibliography grid */}
       <BooksGrid />
 
-      {/* Newsletter / subscriber CTA */}
+      {/* Author bibliography */}
       <section className="max-w-4xl mx-auto px-8 mt-16 mb-24">
         <div className="relative rounded-2xl p-12 overflow-hidden bg-primary/5 text-center border border-white/20 backdrop-blur-md">
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-          <h4 className="text-3xl font-display font-bold mb-4 relative">Stay Updated on New Releases</h4>
+          <h2 className="text-3xl font-display font-bold mb-4 relative">More from Rishabh Agarwal</h2>
           <p className="text-on-surface-variant mb-8 max-w-xl mx-auto relative">
-            Get early access to chapter previews, limited edition copies, and
-            quarterly essays from Rishabh Agrawal.
+            Amazon lists the latest editions, including <cite>From Gurutvakarsana to Gravity</cite>,
+            co-authored with Swati Agarwal.
           </p>
-          <form className="flex flex-col md:flex-row gap-4 max-w-md mx-auto relative">
-            <input
-              className="flex-grow bg-surface-container-low border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary transition-all outline-none"
-              placeholder="Email Address"
-              type="email"
-            />
-            <button
-              className="bg-primary text-on-primary font-bold px-8 py-3 rounded-md hover:opacity-90 transition-all"
-              type="submit"
-            >
-              Join the Circle
-            </button>
-          </form>
+          <a href="https://www.amazon.in/stores/author/B0F4K2RZNV" target="_blank" rel="noopener noreferrer" className="inline-block bg-primary text-on-primary font-bold px-8 py-3 rounded-md hover:opacity-90 transition-all">
+            View Amazon author page ↗
+          </a>
         </div>
       </section>
     </div>

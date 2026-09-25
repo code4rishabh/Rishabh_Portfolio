@@ -29,10 +29,10 @@ const BOOKS = [
   {
     title: "My 50 Arranged Marriage Dates",
     description:
-      "A hilarious and heartfelt account of navigating modern arranged marriages, dating, and human connection.",
-    year: "2026",
-    genre: "Humor / Memoir",
-    amazonHref: "https://amzn.in/d/04YPt5mw", // ← Update with real Amazon link
+      "A fictional story about arranged matchmaking, relationships, and self-discovery.",
+    year: "2025",
+    genre: "Fiction / Relationships",
+    amazonHref: "https://www.amazon.in/dp/B0FM7SPP37",
     coverSrc: IMAGES.books.marriageDates,
     coverAlt: "My 50 Arranged Marriage Dates - Book Cover",
   },

@@ -46,7 +46,7 @@ export const AchievementsHero = () => {
           <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl lg:rotate-2 hover:rotate-0 transition-transform duration-700 border border-outline-variant/10">
             <img
               className="w-full h-full object-cover"
-              alt="Rishabh Agrawal achievements and milestones"
+              alt="Rishabh Agarwal achievements and milestones"
               src={IMAGES.achievements.hero}
             />
           </div>

@@ -32,9 +32,9 @@ const FEATURED_BOOKS = [
     badge: "Also Available",
     title: "My 50 Arranged Marriage Dates",
     description:
-      "A hilarious and heartfelt account of navigating modern arranged marriages, dating, and human connection in the digital age.",
-    amazonHref: "https://amzn.in/d/04YPt5mw", // ← Update with real Amazon link
-    published: "2026",
+      "A fictional story about arranged matchmaking, relationships, and self-discovery.",
+    amazonHref: "https://www.amazon.in/dp/B0FM7SPP37",
+    published: "2025",
     format: "Paperback, Digital",
   },
 ];
@@ -84,7 +84,7 @@ export const BooksFeatured = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-md font-bold hover:opacity-90 transition-all"
               >
-                Buy on Amazon
+                View on Amazon
                 <ExternalLink className="w-4 h-4" />
               </Link>
 

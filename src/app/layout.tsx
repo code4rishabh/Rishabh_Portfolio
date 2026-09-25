@@ -13,36 +13,54 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rishabhagrawal.in'),
+  metadataBase: new URL('https://www.rishabhagarwal.in'),
   title: {
-    default: "Rishabh Agrawal | AI Entrepreneur, Author & Tech Visionary",
-    template: "%s | Rishabh Agrawal"
+    default: "Rishabh Agarwal | AI Founder, Author & Creator",
+    template: "%s | Rishabh Agarwal"
   },
-  description: "Official portfolio of Rishabh Agrawal - Author of 'My 50 Arranged Marriage Dates', Founder of Faxlab AI, and thought leader in generative AI and cognitive science.",
-  keywords: ["Rishabh Agrawal", "AI Entrepreneur", "Faxlab AI", "My 50 Arranged Marriage Dates", "Tech Author", "Generative AI"],
-  authors: [{ name: "Rishabh Agrawal" }],
+  description: "Rishabh Agarwal is the founder of FaxLab AI, creator of Triveni Sangam Dialogues, and an author writing about technology, work and life.",
+  keywords: ["Rishabh Agarwal", "FaxLab AI", "Triveni Sangam Dialogues", "AI", "Author"],
+  authors: [{ name: "Rishabh Agarwal" }],
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://rishabhagrawal.in",
-    siteName: "Rishabh Agrawal Portfolio",
-    title: "Rishabh Agrawal | AI Entrepreneur, Author & Tech Visionary",
-    description: "Official portfolio of Rishabh Agrawal - Author, Founder of Faxlab AI, and tech visionary.",
+    locale: "en_IN",
+    url: "https://www.rishabhagarwal.in",
+    siteName: "Rishabh Agarwal",
+    title: "Rishabh Agarwal | AI Founder, Author & Creator",
+    description: "Founder of FaxLab AI, creator of Triveni Sangam Dialogues, and author.",
     images: [
       {
-        url: "/images/hero/hero.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Rishabh Agrawal",
+        url: "/images/profile/Rishabh_portrait.png",
+        alt: "Rishabh Agarwal",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rishabh Agrawal | AI Entrepreneur & Author",
-    description: "Official portfolio of Rishabh Agrawal - Author, Founder of Faxlab AI, and tech visionary.",
-    images: ["/images/hero/hero.jpg"],
+    title: "Rishabh Agarwal | AI Founder, Author & Creator",
+    description: "Founder of FaxLab AI, creator of Triveni Sangam Dialogues, and author.",
+    images: ["/images/profile/Rishabh_portrait.png"],
   },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.rishabhagarwal.in/#person",
+  name: "Rishabh Agarwal",
+  url: "https://www.rishabhagarwal.in/",
+  image: "https://www.rishabhagarwal.in/images/profile/Rishabh_portrait.png",
+  description: "Founder of FaxLab AI, creator of Triveni Sangam Dialogues, and author.",
+  sameAs: [
+    "https://www.linkedin.com/in/rishabhagarwaliimc/",
+    "https://www.goodreads.com/author/show/57744925.Rishabh_Agarwal",
+    "https://www.amazon.in/stores/author/B0F4K2RZNV",
+    "https://www.youtube.com/@TriveniSangamDialogues",
+  ],
+  affiliation: [
+    { "@type": "Organization", name: "FaxLab AI", url: "https://faxlab.in/" },
+    { "@type": "Organization", name: "Triveni Sangam Dialogues", url: "https://trivenisangamdialogues.in/" },
+  ],
 };
 
 import { Header } from "@/components/layout/Header";
@@ -61,6 +79,7 @@ export default function RootLayout({
     >
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema).replace(/</g, "\\u003c") }} />
       </head>
       <body className="min-h-full flex flex-col bg-surface font-sans text-on-surface">
         <Header />

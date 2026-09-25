@@ -22,13 +22,13 @@ export default function BooksTeaser() {
     },
     {
       title: "My 50 Arranged Marriage Dates",
-      description: "The untold story of building a silicon valley powerhouse from a home garage in Mumbai.",
+      description: "A fictional story about arranged matchmaking, family expectations, and self-discovery.",
       longDescription: [
-        "What begins as a traditional quest for a life partner turns into a profound journey of self-discovery and entrepreneurial grit. Through 50 distinct encounters, the narrative weaves lessons of resilience, negotiation, and intuition.",
-        "It's not just a memoir about modern relationships; it's a blueprint for building a tech powerhouse. By applying the emotional intelligence learned through these dates to the cutthroat world of Silicon Valley startups, it reveals the human element behind every successful business."
+        "Through the fictional character Saurabh, this story explores first meetings, family expectations, disappointments, and the search for compatibility.",
+        "At its heart, the book is about understanding yourself while navigating relationships and the pressures around them."
       ],
       image: IMAGES.books.marriageDates,
-      link: "https://amzn.in/d/04YPt5mw"
+      link: "https://www.amazon.in/dp/B0FM7SPP37"
     },
     {
       title: "Transforming Supply Chain with AI",
@@ -169,7 +169,7 @@ export default function BooksTeaser() {
                     className="w-full sm:w-auto bg-primary text-on-primary px-8 py-3.5 rounded-xl font-bold hover:shadow-lg hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
                   >
                     <ShoppingCart className="w-5 h-5" />
-                    Buy on Amazon
+                    View on Amazon
                   </a>
                   <button 
                     onClick={() => setSelectedBook(null)}

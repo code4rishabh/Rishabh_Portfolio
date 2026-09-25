@@ -36,7 +36,7 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-display text-sm font-bold mb-6 tracking-wide"
           >
-            Founder of Faxlab AI &amp; Author
+            Founder of FaxLab AI &amp; Author
           </motion.span>
           
           <h1 className="font-display font-bold text-on-surface leading-[1.1] mb-8">
@@ -45,7 +45,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-10">
-            Bridging the gap between technical precision and human narrative. Currently building Faxlab AI while exploring the philosophy of innovation through the written word.
+            Bridging the gap between technical precision and human narrative. Currently building FaxLab AI while exploring the philosophy of innovation through the written word.
           </p>
           
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
@@ -63,7 +63,7 @@ export default function Hero() {
               href="/faxlab"
               className="w-full sm:w-auto bg-surface-container-high text-on-surface px-10 py-4 rounded-md text-lg font-bold shadow-sm hover:shadow-md transition-all duration-300 border border-outline-variant/30 text-center"
             >
-              Faxlab AI
+              FaxLab AI
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05, y: -2 }}
@@ -87,7 +87,7 @@ export default function Hero() {
         >
           <div className="aspect-[4/5] max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-2xl relative z-10 transform lg:rotate-2 hover:rotate-0 transition-transform duration-700">
             <img
-              alt="Rishabh Agrawal"
+              alt="Rishabh Agarwal"
               className="w-full h-full object-cover"
               src={IMAGES.profile.heroPortrait}
             />
