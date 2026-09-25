@@ -57,10 +57,7 @@ const personSchema = {
     "https://www.amazon.in/stores/author/B0F4K2RZNV",
     "https://www.youtube.com/@TriveniSangamDialogues",
   ],
-  affiliation: [
-    { "@type": "Organization", name: "FaxLab AI", url: "https://faxlab.in/" },
-    { "@type": "Organization", name: "Triveni Sangam Dialogues", url: "https://trivenisangamdialogues.in/" },
-  ],
+  knowsAbout: ["FaxLab AI", "Triveni Sangam Dialogues", "artificial intelligence", "books"],
 };
 
 import { Header } from "@/components/layout/Header";
