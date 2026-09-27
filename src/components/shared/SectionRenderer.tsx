@@ -8,7 +8,7 @@ const About = React.lazy(() => import('@/components/sections/Home/About'));
 // const Contact = React.lazy(() => import('@/components/sections/Contact'));
 
 
-const components: Record<string, any> = {
+const components: Record<string, React.ComponentType<{ content?: Section["content"]; style?: Section["style"] }>> = {
   hero: Hero,
   about: About,
   // projects: Projects,

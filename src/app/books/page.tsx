@@ -1,47 +1,22 @@
-// ============================================================
-// app/books/page.tsx
-// Route: /books
-// This page assembles all Books section components.
-// To add/remove sections, import and place them below.
-// ============================================================
+import type { Metadata } from "next";
+import { ArrowUpRight } from "lucide-react";
+import { books, links } from "@/lib/profile";
 
-import React from "react";
-import { BooksHero } from "@/components/sections/Books/BooksHero";
-import { BooksFeatured } from "@/components/sections/Books/BooksFeatured";
-import { BooksGrid } from "@/components/sections/Books/BooksGrid";
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "Books",
-  description:
-    "Explore books by Rishabh Agarwal that bridge technology, AI, and human narrative.",
+  description: "Four books by Rishabh Agarwal on personal growth, relationships, AI in supply chains and Indian linguistic heritage. Browse the titles and official author profiles.",
   alternates: { canonical: "/books" },
 };
 
 export default function BooksPage() {
-  return (
-    <div className="pb-24 pt-16">
-      {/* Page header */}
-      <BooksHero />
-
-      {/* Featured/latest book showcase */}
-      <BooksFeatured />
-
-      {/* Full bibliography grid */}
-      <BooksGrid />
-
-      {/* Author bibliography */}
-      <section className="max-w-4xl mx-auto px-8 mt-16 mb-24">
-        <div className="relative rounded-2xl p-12 overflow-hidden bg-primary/5 text-center border border-white/20 backdrop-blur-md">
-          <h2 className="text-3xl font-display font-bold mb-4 relative">More from Rishabh Agarwal</h2>
-          <p className="text-on-surface-variant mb-8 max-w-xl mx-auto relative">
-            Amazon lists the latest editions, including <cite>From Gurutvakarsana to Gravity</cite>,
-            co-authored with Swati Agarwal.
-          </p>
-          <a href="https://www.amazon.in/stores/author/B0F4K2RZNV" target="_blank" rel="noopener noreferrer" className="inline-block bg-primary text-on-primary font-bold px-8 py-3 rounded-md hover:opacity-90 transition-all">
-            View Amazon author page ↗
-          </a>
-        </div>
-      </section>
+  return <div className="interior-page">
+    <div className="section-wrap interior-hero"><p className="eyebrow"><span className="eyebrow-line" /> Four published books</p><h1>Books &amp;<br /><em>writing.</em></h1><p>From personal possibility and relationships to supply chains and Indian linguistic heritage.</p></div>
+    <div className="section-wrap full-book-list">
+      {books.map((book, index) => <article className="full-book" key={book.title}>
+        <div className="full-book__cover"><span>0{index + 1}</span>{book.cover ? <img src={book.cover} alt={`Cover of ${book.title}`} /> : <div className="book-type-art" aria-hidden="true"><small>Rishabh Agarwal · Swati Agarwal</small><strong>From Gurutvākārṣaṇa<br />to Gravity</strong><span>Language · Heritage · Ideas</span></div>}</div>
+        <div className="full-book__copy"><p className="eyebrow">{book.category}</p><h2>{book.title}</h2><p>{book.summary}</p><a className="text-link" href={book.url} target="_blank" rel="noopener noreferrer">View on Amazon <ArrowUpRight size={18} /></a></div>
+      </article>)}
     </div>
-  );
+    <div className="section-wrap book-profile-links"><h2>Follow the author</h2><a href={links.amazonAuthor} target="_blank" rel="noopener noreferrer">Amazon author page ↗</a><a href={links.goodreads} target="_blank" rel="noopener noreferrer">Goodreads author page ↗</a></div>
+  </div>;
 }

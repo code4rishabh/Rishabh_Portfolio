@@ -106,7 +106,7 @@ export const AboutTimeline = () => {
             </h2>
             <p className="text-on-surface-variant leading-relaxed text-lg">
               A dynamic career spanning across Artificial Intelligence, Global Procurement, and Logistics Transformation. 
-              Driven by a commitment to pushing the boundaries of what's possible at the intersection of logic and creativity.
+              Driven by a commitment to pushing the boundaries of what&apos;s possible at the intersection of logic and creativity.
             </p>
           </motion.div>
 

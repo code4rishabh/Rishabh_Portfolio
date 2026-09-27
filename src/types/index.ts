@@ -2,8 +2,8 @@ export interface Section {
   id: string;
   type: 'hero' | 'about' | 'projects' | 'contact' | 'custom';
   order: number;
-  content: Record<string, any>;
-  style?: Record<string, any>;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
   metadata?: {
     lastUpdated: string;
     published: boolean;

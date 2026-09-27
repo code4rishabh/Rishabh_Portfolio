@@ -90,7 +90,7 @@ export const AchievementsAwards = () => {
                 {/* Pull Quote inside the panel to add richness and fill space */}
                 <div className="p-6 my-8 border-l-4 border-primary bg-surface-container-lowest rounded-r-2xl shadow-sm">
                   <p className="text-xl font-display italic text-on-surface mb-2">
-                    "True innovation happens when we stop building features and start building philosophies."
+                    &ldquo;True innovation happens when we stop building features and start building philosophies.&rdquo;
                   </p>
                 </div>
                 

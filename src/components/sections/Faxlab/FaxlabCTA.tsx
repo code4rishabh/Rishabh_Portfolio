@@ -81,7 +81,7 @@ export const FaxlabCTA = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold font-display text-on-surface">Schedule a Session</h3>
-                    <p className="text-sm text-on-surface-variant">We'll guide you through the setup</p>
+                    <p className="text-sm text-on-surface-variant">We&apos;ll guide you through the setup</p>
                   </div>
                 </div>
 

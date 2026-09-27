@@ -18,7 +18,7 @@ export const FaxlabProduct = () => {
               src={IMAGES.profile.faxlab}
             />
             <div className="absolute -bottom-10 -right-10 bg-surface p-6 rounded-lg shadow-xl max-w-xs hidden md:block border border-outline-variant/10 z-10">
-              <p className="italic text-on-surface-variant font-medium">"Technology is the pen, but the logic is the story. Faxlab is the convergence of both."</p>
+              <p className="italic text-on-surface-variant font-medium">&ldquo;Technology is the pen, but the logic is the story. Faxlab is the convergence of both.&rdquo;</p>
               <p className="mt-4 font-bold text-primary">— Rishabh Agarwal</p>
             </div>
           </div>

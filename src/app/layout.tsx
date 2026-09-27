@@ -1,24 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.rishabhagarwal.in'),
   title: {
-    default: "Rishabh Agarwal | AI Founder, Author & Creator",
+    default: "Rishabh Agarwal | Founder, Author & Speaker",
     template: "%s | Rishabh Agarwal"
   },
-  description: "Rishabh Agarwal is the founder of FaxLab AI, creator of Triveni Sangam Dialogues, and an author writing about technology, work and life.",
+  description: "Rishabh Agarwal founded FaxLab AI and Triveni Sangam Dialogues. Explore his books, public conversations and work across AI, supply chains and Indian knowledge traditions.",
   keywords: ["Rishabh Agarwal", "FaxLab AI", "Triveni Sangam Dialogues", "AI", "Author"],
   authors: [{ name: "Rishabh Agarwal" }],
   openGraph: {
@@ -26,7 +15,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://www.rishabhagarwal.in",
     siteName: "Rishabh Agarwal",
-    title: "Rishabh Agarwal | AI Founder, Author & Creator",
+    title: "Rishabh Agarwal | Founder, Author & Speaker",
     description: "Founder of FaxLab AI, creator of Triveni Sangam Dialogues, and author.",
     images: [
       {
@@ -37,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rishabh Agarwal | AI Founder, Author & Creator",
+    title: "Rishabh Agarwal | Founder, Author & Speaker",
     description: "Founder of FaxLab AI, creator of Triveni Sangam Dialogues, and author.",
     images: ["/images/profile/Rishabh_portrait.png"],
   },
@@ -56,6 +45,9 @@ const personSchema = {
     "https://www.goodreads.com/author/show/57744925.Rishabh_Agarwal",
     "https://www.amazon.in/stores/author/B0F4K2RZNV",
     "https://www.youtube.com/@TriveniSangamDialogues",
+    "https://www.youtube.com/@faxlabai",
+    "https://faxlab.in/",
+    "https://trivenisangamdialogues.in/",
   ],
   knowsAbout: ["FaxLab AI", "Triveni Sangam Dialogues", "artificial intelligence", "books"],
 };
@@ -72,10 +64,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased scroll-smooth`}
+      className="h-full antialiased scroll-smooth"
     >
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema).replace(/</g, "\\u003c") }} />
       </head>
       <body className="min-h-full flex flex-col bg-surface font-sans text-on-surface">
