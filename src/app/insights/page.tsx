@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const ideas = [
   { label: "Responsible AI", title: "How to build an ethical AI culture", summary: "A Jaipuria Institute of Management session on bias, accountability and human judgment.", url: "https://jaipuriamba.edu.in/webinar-on-how-to-build-an-ethical-ai-culture-at-jaipuria-institute-of-management/" },
   { label: "Work & leadership", title: "The 70-hour work week debate", summary: "A conversation with Edu Attack about productivity and the way we work.", url: "https://www.youtube.com/watch?v=Vm5ZOnygdIs" },
-  { label: "AI in operations", title: "Transforming supply chains with AI", summary: "Ideas and strategies for EPC procurement and logistics in Rishabh's book.", url: "https://amzn.in/d/06E5erf2" },
+  { label: "AI in operations", title: "Transforming supply chains with AI", summary: "Ideas and strategies for EPC procurement and logistics in Rishabh's book.", url: "/books/transforming-supply-chain-with-ai" },
 ];
 
 export default function InsightsPage() {

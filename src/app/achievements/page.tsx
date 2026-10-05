@@ -12,7 +12,7 @@ const work = [
   { number: "01", title: "FaxLab AI", area: "AI & enterprise learning", summary: "Founded an AI consulting and education venture focused on useful adoption at work.", url: links.faxlab },
   { number: "02", title: "Triveni Sangam Dialogues", area: "Culture & conversation", summary: "Created a platform for conversations about Sanatan wisdom and Indian knowledge traditions.", url: links.triveni },
   { number: "03", title: "Books", area: "Writing & publishing", summary: "Four published books spanning self-discovery, relationships, AI in supply chains and linguistic heritage.", url: "/books" },
-  { number: "04", title: "Public conversations", area: "Speaking & dialogue", summary: "Talks on responsible AI, work, leadership and Indian traditions.", url: "/appearances" },
+  { number: "04", title: "Public conversations", area: "Speaking & dialogue", summary: "Talks on responsible AI, work, leadership and Indian traditions.", url: "/speaking-media" },
 ];
 
 export default function SelectedWorkPage() {
