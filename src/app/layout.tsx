@@ -44,6 +44,12 @@ const personSchema = {
   jobTitle: "Founder & CEO",
   alumniOf: { "@type": "CollegeOrUniversity", name: "Indian Institute of Management Calcutta" },
   worksFor: { "@type": "Organization", name: "FaxLab AI", url: links.faxlab },
+  subjectOf: {
+    "@type": "WebPage",
+    name: "Jaipuria Institute of Management: ethical AI guest session",
+    url: links.jaipuriaReport,
+    publisher: { "@type": "CollegeOrUniversity", name: "Jaipuria Institute of Management, Ghaziabad" },
+  },
   sameAs: [
     "https://www.linkedin.com/in/rishabhagarwaliimc/",
     "https://www.goodreads.com/author/show/57744925.Rishabh_Agarwal",
