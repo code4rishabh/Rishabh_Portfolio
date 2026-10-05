@@ -3,6 +3,7 @@ export const links = {
   triveni: "https://trivenisangamdialogues.in/",
   faxlabYoutube: "https://www.youtube.com/@faxlabai",
   triveniYoutube: "https://www.youtube.com/@TriveniSangamDialogues",
+  interviewsPlaylist: "https://www.youtube.com/playlist?list=PLSPuLWNuVvvk",
   linkedin: "https://www.linkedin.com/in/rishabhagarwaliimc/",
   amazonAuthor: "https://www.amazon.in/stores/author/B0F4K2RZNV",
   goodreads: "https://www.goodreads.com/author/show/57744925.Rishabh_Agarwal",
