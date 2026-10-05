@@ -4,6 +4,8 @@ export const links = {
   faxlabYoutube: "https://www.youtube.com/@faxlabai",
   triveniYoutube: "https://www.youtube.com/@TriveniSangamDialogues",
   interviewsPlaylist: "https://www.youtube.com/playlist?list=PLSPuLWNuVvvk",
+  jaipuriaVideo: "https://www.youtube.com/watch?v=cUBy2KbQJ_s",
+  jaipuriaReport: "https://jaipuriamba.edu.in/webinar-on-how-to-build-an-ethical-ai-culture-at-jaipuria-institute-of-management/",
   linkedin: "https://www.linkedin.com/in/rishabhagarwaliimc/",
   amazonAuthor: "https://www.amazon.in/stores/author/B0F4K2RZNV",
   goodreads: "https://www.goodreads.com/author/show/57744925.Rishabh_Agarwal",
@@ -97,8 +99,13 @@ export const appearances = [
   },
   {
     label: "Jaipuria Institute of Management",
-    title: "How to build an ethical AI culture",
-    url: "https://jaipuriamba.edu.in/webinar-on-how-to-build-an-ethical-ai-culture-at-jaipuria-institute-of-management/",
+    title: "Guest speaker: building an ethical AI culture · 3 February 2026",
+    url: links.jaipuriaReport,
+  },
+  {
+    label: "Jaipuria Institute of Management · official video",
+    title: "Ethical AI: bias, transparency, accountability and human judgment",
+    url: links.jaipuriaVideo,
   },
   {
     label: "Edu Attack",
