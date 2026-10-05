@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { books } from '@/lib/profile'
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.rishabhagarwal.in';
@@ -41,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/appearances`,
+      url: `${baseUrl}/speaking-media`,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
@@ -57,5 +58,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
+    ...books.map((book) => ({
+      url: `${baseUrl}/books/${book.slug}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
   ]
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { founderBio, links } from "@/lib/profile";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.rishabhagarwal.in'),
@@ -39,15 +40,16 @@ const personSchema = {
   name: "Rishabh Agarwal",
   url: "https://www.rishabhagarwal.in/",
   image: "https://www.rishabhagarwal.in/images/profile/Rishabh_portrait.png",
-  description: "Founder of FaxLab AI, creator of Triveni Sangam Dialogues, and author.",
+  description: founderBio,
+  jobTitle: "Founder & CEO",
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Indian Institute of Management Calcutta" },
+  worksFor: { "@type": "Organization", name: "FaxLab AI", url: links.faxlab },
   sameAs: [
     "https://www.linkedin.com/in/rishabhagarwaliimc/",
     "https://www.goodreads.com/author/show/57744925.Rishabh_Agarwal",
     "https://www.amazon.in/stores/author/B0F4K2RZNV",
     "https://www.youtube.com/@TriveniSangamDialogues",
     "https://www.youtube.com/@faxlabai",
-    "https://faxlab.in/",
-    "https://trivenisangamdialogues.in/",
   ],
   knowsAbout: ["FaxLab AI", "Triveni Sangam Dialogues", "artificial intelligence", "books"],
 };

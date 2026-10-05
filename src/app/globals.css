@@ -196,3 +196,8 @@ h2 {
 section {
   position: relative;
 }
+
+.interior-hero h1.book-detail-title{font-size:clamp(2.5rem,6vw,5.5rem);max-width:1000px;overflow-wrap:break-word}
+.book-facts{display:grid;grid-template-columns:auto 1fr;gap:.65rem 1.5rem;color:#52676b;margin:2rem 0;line-height:1.6}
+.book-facts dt{font-weight:700;color:#173239}.book-facts dd{margin:0}
+@media(max-width:480px){.book-facts{grid-template-columns:1fr;gap:.25rem}.book-facts dd{margin-bottom:.75rem}}

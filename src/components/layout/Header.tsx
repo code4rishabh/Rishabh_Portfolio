@@ -7,7 +7,7 @@ const navigation = [
   { label: "About", href: "/about" },
   { label: "Work", href: "/#work" },
   { label: "Books", href: "/books" },
-  { label: "Appearances", href: "/appearances" },
+  { label: "Speaking & Media", href: "/speaking-media" },
 ];
 
 export function Header() {

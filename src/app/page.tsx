@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowDownRight, ArrowUpRight, BookOpen, Play } from "lucide-react";
-import { appearances, books, links } from "@/lib/profile";
+import { appearances, books, founderBio, links } from "@/lib/profile";
 
 export const metadata: Metadata = {
   title: { absolute: "Rishabh Agarwal | Founder, Author & Speaker" },
@@ -18,7 +18,7 @@ export default function HomePage() {
             <p className="eyebrow eyebrow--light"><span className="eyebrow-line" /> Founder · Author · Speaker</p>
             <h1>Rishabh<br /><em>Agarwal.</em></h1>
             <p className="editorial-hero__lead">Building practical AI. Exploring India&apos;s living wisdom. Writing about the choices that shape our lives.</p>
-            <p className="editorial-hero__detail">Founder of FaxLab AI and Triveni Sangam Dialogues, with two decades of experience in supply chains and strategy.</p>
+            <p className="editorial-hero__detail">{founderBio}</p>
             <div className="hero-actions">
               <Link className="button button--light" href="#work">Explore my work <ArrowUpRight size={18} /></Link>
               <Link className="button button--outline-light" href="/books">View the books <BookOpen size={18} /></Link>
@@ -73,11 +73,11 @@ export default function HomePage() {
           </div>
           <div className="book-strip">
             {books.map((book, index) => (
-              <a className="book-tile" href={book.url} target="_blank" rel="noopener noreferrer" key={book.title}>
+              <Link className="book-tile" href={`/books/${book.slug}`} key={book.title}>
                 <div className="book-tile__art"><span className="book-index">0{index + 1}</span>{book.cover ? <img src={book.cover} alt={`Cover of ${book.title}`} /> : <div className="book-type-art" aria-hidden="true"><small>Rishabh Agarwal · Swati Agarwal</small><strong>From Gurutvākārṣaṇa<br />to Gravity</strong><span>Language · Heritage · Ideas</span></div>}</div>
                 <div className="book-tile__meta"><span>{book.category}</span><ArrowUpRight size={19} /></div>
                 <h3>{book.title}</h3>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="author-links"><a href={links.amazonAuthor} target="_blank" rel="noopener noreferrer">Amazon author page ↗</a><a href={links.goodreads} target="_blank" rel="noopener noreferrer">Goodreads author page ↗</a></div>
@@ -99,7 +99,7 @@ export default function HomePage() {
       <section className="appearances-band" id="conversations"><div className="section-wrap">
         <div className="section-heading section-heading--row"><div><p className="eyebrow"><span className="eyebrow-line" /> In conversation</p><h2>Ideas shared<br /><em>in public.</em></h2></div><p>Selected talks and discussions on AI, work and culture.</p></div>
         <div className="appearance-list">{appearances.map((item, index) => <a href={item.url} target="_blank" rel="noopener noreferrer" key={item.url}><span>0{index + 1}</span><div><small>{item.label}</small><h3>{item.title}</h3></div><ArrowUpRight size={21} /></a>)}</div>
-        <Link className="text-link" href="/appearances">All appearances <ArrowUpRight size={17} /></Link>
+        <Link className="text-link" href="/speaking-media">All speaking &amp; media <ArrowUpRight size={17} /></Link>
       </div></section>
 
       <section className="contact-band"><div className="section-wrap contact-band__inner"><div><p className="eyebrow eyebrow--light"><span className="eyebrow-line" /> Get in touch</p><h2>Let&apos;s begin a<br /><em>conversation.</em></h2></div><a className="button button--light" href={links.email}>Write to Rishabh <ArrowUpRight size={19} /></a></div></section>
