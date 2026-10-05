@@ -72,7 +72,7 @@ export const books: Book[] = [
     title: "From Gurutvākārṣaṇa to Gravity",
     category: "Language & heritage",
     summary: "Coauthored with Swati Agarwal, this book explores connections between Indian linguistic traditions and modern language.",
-    cover: "",
+    cover: "/images/books/From_Gurutvakarsana_to_Gravity.jpg",
     url: "https://www.amazon.in/dp/B0HF81Q77J",
     asin: "B0HF81Q77J",
     goodreads: "https://www.goodreads.com/book/show/260337399-from-gurutv-k-r-a-a-to-gravity",
